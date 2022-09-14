@@ -39,7 +39,20 @@ if (isset($_SESSION['sigup'])) {
     <?php require './views/header.php' ?>
 
 
-    
+    <div class="flex align-item-center hero-container">
+      <div class="hero">
+        <h2>Heero</h2>
+
+        <div class="hero-contnt">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex consectetur vel ad, quod totam incidunt doloremque repudiandae nostrum officiis nesciunt rem sequi expedita at soluta aut ipsum non harum enim!
+            Vero unde, nemo, consequuntur ducimus ab quisquam accusantium id perspiciatis recusandae, asperiores itaque explicabo voluptatibus. Laborum numquam excepturi, natus assumenda fugit adipisci ex possimus voluptas rerum voluptate, debitis inventore id!
+            Quidem cupiditate pariatur, et vero sapiente unde deleniti ut in aperiam, quam, laudantium hic omnis rem nobis? A, aperiam harum quidem doloribus eos ducimus ea, expedita quia quod saepe omnis?
+            Minus nesciunt temporibus deserunt animi illum tempora tenetur velit dolores pariatur a, repellat quibusdam sequi fuga itaque. Placeat dolorem nobis dignissimos voluptates suscipit iusto inventore illum, rem voluptatum alias molestias!
+          </p>
+        </div>
+      </div>
+    </div>
 
 
     <?php require './views/footer.php' ?>
