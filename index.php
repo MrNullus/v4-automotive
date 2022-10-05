@@ -20,7 +20,7 @@ require_once 'minerva.config.php';
     <title>V4 Automotive</title>
 
     <!--===== Bootstrap CSS =====-->
-    <link href="<?php echo assets('public/bootstrap/css', 'bootstrap.min.css') ?>" rel="stylesheet" >
+    <link href="<?php echo assets('bootstrap/css', 'bootstrap.min.css'); ?>" rel="stylesheet" />
 
     <!--===== Links File CSS  =====-->
     <link rel="stylesheet" href="<?php echo carregar_css('reset'); ?>">
@@ -43,8 +43,8 @@ require_once 'minerva.config.php';
           <div class="nav col-12 col-md-auto mb-2 justify-content-around mb-md-0 row-top">
             <a href="./">
               <img 
-                class="image"
-                src="<?php # carregar_imagem('logo'); ?>" 
+                class="image rounded-5 logo-header"
+                src="<?php echo assets('img', 'v4automotive.png') ?>" 
                 alt="V4 Automotive" 
                 aria-label="V4 Automotive" 
               />
