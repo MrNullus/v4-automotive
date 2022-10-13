@@ -49,3 +49,10 @@ textarea {
 :where([draggable="true"]) {
   -webkit-user-drag: element;
 }
+* {
+	box-sizing: border-box!important;
+	font-size: 16px!important;
+}
+a {
+	text-decoration: none!important;
+}

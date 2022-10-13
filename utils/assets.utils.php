@@ -1,6 +1,37 @@
 <?php  
-function assets($folder, $file) {
-	return 'http://localhost:8080/v4_automotive/public/'.$folder.'/'.$file;
+
+function assets( $asset, $file ) {
+	
+	$caminho_preparado = url_base().'/public/';
+
+	switch( $asset ) {
+		case 'img':
+			$caminho_preparado .= '/'.$asset.'/'.$file;
+			break;
+
+		case 'css':
+			$caminho_preparado .= '/'.$asset.'/'.$file;
+			break;
+
+		case 'js':
+			$caminho_preparado .= '/'.$asset.'/'.$file;
+			break;
+
+		case 'bootstrap/js':
+			$caminho_preparado .= '/'.$asset.'/'.$file;
+			break;
+
+		case 'bootstrap/css':
+			$caminho_preparado .= '/'.$asset.'/'.$file;
+			break;
+
+		default:
+			echo "Asset não encontrado";
+			break;
+	}
+
+	return $caminho_preparado;
+
 }
 
 ?>
