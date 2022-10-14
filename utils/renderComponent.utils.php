@@ -1,6 +1,6 @@
 <?php
 
-function renderComponente( $componente ) {
+function renderComponent( $componente ) {
   require_once('components/'.$componente.'.php');
 }
 

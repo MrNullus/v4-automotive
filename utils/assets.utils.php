@@ -6,23 +6,23 @@ function assets( $asset, $file ) {
 
 	switch( $asset ) {
 		case 'img':
-			$caminho_preparado .= '/'.$asset.'/'.$file;
+			$caminho_preparado .= $asset.'/'.$file;
 			break;
 
 		case 'css':
-			$caminho_preparado .= '/'.$asset.'/'.$file;
+			$caminho_preparado .= $asset.'/'.$file;
 			break;
 
 		case 'js':
-			$caminho_preparado .= '/'.$asset.'/'.$file;
+			$caminho_preparado .= $asset.'/'.$file;
 			break;
 
 		case 'bootstrap/js':
-			$caminho_preparado .= '/'.$asset.'/'.$file;
+			$caminho_preparado .= $asset.'/'.$file;
 			break;
 
 		case 'bootstrap/css':
-			$caminho_preparado .= '/'.$asset.'/'.$file;
+			$caminho_preparado .= $asset.'/'.$file;
 			break;
 
 		default:
