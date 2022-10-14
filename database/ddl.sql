@@ -14,40 +14,6 @@ USE v4_automotive;
 * | Criar Tabelas  | *
 */
 
--- @ criar tabela clientes
-CREATE TABLE Clientes (
-    -- # columns
-    cliente_id INT NOT NULL AUTO_INCREMENT,
-    ender_id INT NOT NULL,
-    nome VARCHAR(90) NOT NULL,
-    cpf VARCHAR(13) NOT NULL,
-    email VARCHAR(90) NOT NULL,
-    telefone VARCHAR(13) NOT NULL,
-    avatar VARCHAR(90),
-
-    -- # constraint
-    PRIMARY KEY (cliente_id),
-    CONSTRAINT fk_ender_id FOREIGN KEY (ender_id)
-        REFERENCES Enders (ender_id)
-);
-
--- @ criar tabela produtos
-CREATE TABLE Produtos (
-    -- columns
-    produto_id INT NOT NULL AUTO_INCREMENT,
-    categoria_id INT NOT NULL,
-    img VARCHAR(90),
-    unidade INT,
-    preco FLOAT,
-    descricao TEXT,
-    obs VARCHAR(100),
-
-    -- # constraint
-    PRIMARY KEY (produto_id),
-    CONSTRAINT fk_categoria_id FOREIGN KEY (categoria_id)
-        REFERENCES Categorias (categoria_id)
-);
-
 -- @ criar tabela categorias (referente aos produtos)
 CREATE TABLE Categorias (
     -- columns
@@ -71,6 +37,41 @@ CREATE TABLE Enders (
 
     -- # constraint
     PRIMARY KEY (ender_id)
+);
+
+-- @ criar tabela clientes
+CREATE TABLE Clientes (
+    -- # columns
+    cliente_id INT NOT NULL AUTO_INCREMENT,
+    ender_id INT NOT NULL,
+    nome VARCHAR(90) NOT NULL,
+    cpf VARCHAR(13) NOT NULL,
+    email VARCHAR(90) NOT NULL,
+    telefone VARCHAR(13) NOT NULL,
+    avatar VARCHAR(90),
+
+    -- # constraint
+    PRIMARY KEY (cliente_id),
+    CONSTRAINT fk_ender_id FOREIGN KEY (ender_id)
+        REFERENCES Enders (ender_id)
+);
+
+-- @ criar tabela produtos
+CREATE TABLE Produtos (
+    -- columns
+    produto_id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    img VARCHAR(90),
+    categoria_id INT NOT NULL,
+    unidade INT,
+    preco FLOAT,
+    descricao TEXT,
+    obs VARCHAR(100),
+
+    -- # constraint
+    PRIMARY KEY (produto_id),
+    CONSTRAINT fk_categoria_id FOREIGN KEY (categoria_id)
+        REFERENCES Categorias (categoria_id)
 );
 
 -- @ criar tabela vendas
