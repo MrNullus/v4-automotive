@@ -20,11 +20,20 @@ require_once 'minerva.config.php';
     <title>V4 Automotive</title>
 
     <!--===== Bootstrap CSS =====-->
-    <link href="<?php echo assets('bootstrap/css', 'bootstrap.min.css'); ?>" rel="stylesheet" />
+    <link 
+      href="<?php echo assets( 'bootstrap/css', 'bootstrap.min.css' ); ?>" 
+      rel="stylesheet" 
+    />
 
     <!--===== Links File CSS  =====-->
-    <link rel="stylesheet" href="<?php echo carregar_css('reset'); ?>" />
-    <link rel="stylesheet" href="<?php echo carregar_css('global'); ?>" />
+    <link 
+      rel="stylesheet" 
+      href="<?php echo assets( 'css', 'reset.css' ); ?>" 
+    />
+    <link 
+      rel="stylesheet" 
+      href="<?php echo assets( 'css', 'global.css' ); ?>" 
+    />
   </head>
 
   <body>
