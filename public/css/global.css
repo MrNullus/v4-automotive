@@ -6,6 +6,10 @@
 	--color-primary: #C82323;
 }
 
+.logo-header {
+	width: 40%;
+}
+
 .btn-dropdown {
 	display: none;
 }
@@ -20,7 +24,6 @@
 .page {
 	min-height: 100vh;
 }
-
 
 .header__box-top .row-top .col-md-3 button:not(:first-child) {
 	margin-left: 0.56rem;
