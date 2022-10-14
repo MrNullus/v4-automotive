@@ -9,13 +9,14 @@
   <div class="container header__box-top">
 
     <!-- single row -->
-    <div class="nav col-12 col-md-auto mb-2 justify-content-around mb-md-0 row-top">
+    <div class="nav col-12 col-md-auto mb-3 justify-content-between mb-md-0 row-top">
       <a href="./">
         <img 
-          class="image rounded-5 logo-header"
+          class="image rounded-3 logo-header"
           src="<?php echo assets('img', 'v4automotive.png') ?>" 
           alt="V4 Automotive" 
           aria-label="V4 Automotive" 
+          width="66%"
         />
       </a>
 
@@ -31,7 +32,7 @@
     </div>
 
     <!-- navbar main -->
-    <nav class="nav col-12 col-md-auto mb-3 justify-content-center  header__navbar-main">
+    <nav class="nav col-12 col-md-auto mb-3 mt-5 justify-content-center  header__navbar-main">
       <button class="btn btn-dropdown" id="btnDropdown">
         |||
       </button>
@@ -42,26 +43,26 @@
         <li class="nav-link"><a href="#">Sobre nos</a></li>
       </ul>
     </nav>
-    </div>
+  </div>
 
-    <div class="container mb-4">
-      <!-- navbar categories -->
-      <nav class="nav col-12 col-md-auto mb-2 d-flex justify-content-center mb-md-0 header__navbar-categories">
-        <button class="btn btn-dropdown" id="btnDropdown">
-          |||
-        </button> 
+  <div class="container mb-4">
+    <!-- navbar categories -->
+    <nav class="nav col-12 col-md-auto mb-2 d-flex justify-content-center mb-md-0 header__navbar-categories">
+      <button class="btn btn-dropdown" id="btnDropdown">
+        |||
+      </button> 
 
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 list-links">
-          <li class="nav-link"><a href="#">Item 1</a></li>
-          <li class="nav-link"><a href="#">Item 2</a></li>
-          <li class="nav-link"><a href="#">Item 3</a></li>
-          <li class="nav-link"><a href="#">Item 4</a></li>
-          <li class="nav-link"><a href="#">Item 4</a></li>
-          <li class="nav-link"><a href="#">Item 4</a></li>
-          <li class="nav-link"><a href="#">Item 4</a></li>
-        </ul>        
-      </nav>
-    </div>
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 list-links">
+        <li class="nav-link"><a href="#">Item 1</a></li>
+        <li class="nav-link"><a href="#">Item 2</a></li>
+        <li class="nav-link"><a href="#">Item 3</a></li>
+        <li class="nav-link"><a href="#">Item 4</a></li>
+        <li class="nav-link"><a href="#">Item 4</a></li>
+        <li class="nav-link"><a href="#">Item 4</a></li>
+        <li class="nav-link"><a href="#">Item 4</a></li>
+      </ul>        
+    </nav>
+  </div>
 
   </header>
 </div>
