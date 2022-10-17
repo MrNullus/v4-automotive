@@ -16,7 +16,9 @@
           aria-label="V4 Automotive" 
         />
       </a>
-      <p class="text-muted">&copy; 2022</p>
+      <p class="text-muted">
+        <strong>&copy; 2022</strong>
+      </p>
     </div>
 
     <div class="col mb-3">
@@ -24,7 +26,7 @@
 
     <!-- media socials -->
     <div class="col mb-3">
-      <h5>Media socials</h5>
+      <h5><strong>Media socials</strong></h5>
 
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Media 1</a></li>
@@ -37,7 +39,7 @@
 
     <!-- features payments -->
     <div class="col mb-3 features-payments">
-      <h5>Features Payments</h5>
+      <h5><strong>Features Payments</strong></h5>
       
       <ul class="nav flex-column list-payments">
         <!-- list payments -->

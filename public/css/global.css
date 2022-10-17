@@ -8,6 +8,7 @@
 ***********/
 :root {
 	--color-primary: #C82323;
+	--color-dark-500: #262626;
 }
 
 body {
@@ -19,6 +20,10 @@ body {
 	Classes 
 	Gerais
 ***********/
+.sr-only {
+	display: none!important;
+}
+
 .logo-header,
 .logo-footer {
 	width: 199px;
@@ -78,6 +83,10 @@ body {
 	letter-spacing: 1pt;
 }
 
+.header__navbar-main ul li a,
+.header__navbar-categories ul li a {
+	color: var(--color-dark-500);
+}
 
 /**********
 	Footer
