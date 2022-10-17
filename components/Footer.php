@@ -10,7 +10,7 @@
       <!-- logo  -->
       <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
         <img 
-          class="image rounded-5 logo-header"
+          class="image rounded-2 logo-footer"
           src="<?php echo assets('img', 'v4automotive.png') ?>" 
           alt="V4 Automotive" 
           aria-label="V4 Automotive" 

@@ -12,11 +12,10 @@
     <div class="nav col-12 col-md-auto mb-3 justify-content-between mb-md-0 row-top">
       <a href="./">
         <img 
-          class="image rounded-3 logo-header"
+          class="image rounded-3 logo-header logo-header"
           src="<?php echo assets('img', 'v4automotive.png') ?>" 
           alt="V4 Automotive" 
-          aria-label="V4 Automotive" 
-          width="66%"
+          aria-label="V4 Automotive"
         />
       </a>
 
@@ -25,7 +24,7 @@
           <i>Login</i>
         </button>
 
-        <button class="btn btn-light btn-card">
+        <button class="btn btn-dark btn-card">
           <i>Card</i>
         </button>
       </div>
@@ -38,7 +37,7 @@
       </button>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 list-link">
-        <li class="nav-link btn link-active"><a href="./">Home</a></li>
+        <li class="nav-link btn link-active btn-outline"><a class="text-dark" href="./">Home</a></li>
         <li class="nav-link"><a href="#">Contato</a></li>
         <li class="nav-link"><a href="#">Sobre nos</a></li>
       </ul>
