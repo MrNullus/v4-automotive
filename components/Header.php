@@ -20,12 +20,27 @@
       </a>
 
       <div class="col-md-3 text-end">
-        <button class="btn btn-danger btn-login">
-          <i>Login</i>
-        </button>
+        <a 
+          href="../views/login.php" 
+          class="btn btn-danger btn-login"
+          title="Login" 
+        >
+          <i 
+            class="fa fa-user-o" 
+            aria-hidden="true"
+          ></i>
+          <span class="sr-only">Usuario</span>
+        </a>
 
-        <button class="btn btn-dark btn-card">
-          <i>Card</i>
+        <button 
+          class="btn btn-dark btn-card" 
+          title="Carrinho de compras"
+        >
+          <i 
+            class="fa fa-shopping-cart" 
+            aria-hidden="true"
+          ></i>
+          <span class="sr-only">Shopping Cart</span>
         </button>
       </div>
     </div>
@@ -65,7 +80,3 @@
 
   </header>
 </div>
-
-
-
-

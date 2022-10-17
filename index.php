@@ -2,7 +2,6 @@
 require_once 'minerva.config.php';
 ?>
 
-<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!--===== Meta Tags =====-->
@@ -18,6 +17,9 @@ require_once 'minerva.config.php';
 
     <!--===== Title of Site =====-->
     <title>V4 Automotive</title>
+
+    <!--===== Font Awesome 4.7.0 =====-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
 
     <!--===== Bootstrap CSS =====-->
     <link 
@@ -45,7 +47,7 @@ require_once 'minerva.config.php';
       <?php renderComponent('Header'); ?>
       <!-- end of header main -->
 
-      <main>
+      <main id="root">
         <div class="banner-container">
           <div class="banner-content" id="banner-main">
           </div>
@@ -206,4 +208,4 @@ require_once 'minerva.config.php';
 
   </body>
 
-</html>
+</html>'

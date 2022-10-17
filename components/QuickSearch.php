@@ -12,7 +12,8 @@
 
   <form action="">
     <div class="box-search">
-      <i>🔎</i>
+      <i class="fa fa-search" aria-hidden="true"></i>
+      
       <input 
         class="input" 
         type="search" 
