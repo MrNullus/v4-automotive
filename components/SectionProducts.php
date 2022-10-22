@@ -1,14 +1,15 @@
 <?php  
 // # Importanto classes necessarias
 import_class(
-  array( 'produto' )
+  array( 'produto', 'categoria' )
 );
 
 
 // # Dados Iniciais
 global $_PDO;
 
-$produto  = new Produto($_PDO);
+$produto   = new Produto($_PDO);
+$categoria = new Categoria($_PDO);
 
 $todosOsProdutos = array();
 $listaCategorias = array(
@@ -17,18 +18,18 @@ $listaCategorias = array(
 
 
 // # Pegar os produtos cadastrado
-foreach ($listaCategorias as $categoria) {
+foreach ($listaCategorias as $item) {
 
-  if ( $produto->categoriaExiste( $categoria ) ) {
+  if ( $categoria->categoriaExiste( $item ) ) {
     $produtosRecebidos = array();
-    $produtosRecebidos = $produto->getProdutos( $categoria,  'all');
+    $produtosRecebidos = $produto->getProdutos( $item,  'all');
 
-    $todosOsProdutos[ $categoria ] = $produtosRecebidos;
+    $todosOsProdutos[ $item ] = $produtosRecebidos;
   }  
 
 }
 $produtosCategoriaAtual = array();
-$countQtdeCategorias = count( array_keys( $todosOsProdutos ) );
+$countQtdeCategorias = count(array_keys( $todosOsProdutos ));
 
 
 // # Exibir os produtos
@@ -74,13 +75,14 @@ for ($i = 0; $i < $countQtdeCategorias; $i++):
           </p>
         </div>
 
+        <!-- TODO: Proximo passo
         <div class="box-avaliations">
           <span>*</span>
           <span>*</span>
           <span>*</span>
           <span>*</span>
           <span>*</span>
-        </div>
+        </div> -->
 
         <div class="product-btns">
           <a href="#" class="btn btn-sale">Comprar</a>
