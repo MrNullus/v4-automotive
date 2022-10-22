@@ -8,7 +8,8 @@ require_utils(
 );
 
 
-class Produto {
+class Produto 
+{
 
 	private $pdo;
 
@@ -19,31 +20,6 @@ class Produto {
 	
 	
 
-	public function categoriaExiste( $categoria ) {
-
-		$stmt = "
-			SELECT 
-				nome 
-			FROM 
-				Categorias 
-			WHERE 
-				LOWER(nome) = LOWER(:categoria)
-		";
-		$find_array = array( ':categoria' => $categoria );
-
-		$categoria = prepare_query( 
-			$stmt, 
-			$find_array, 
-			$this->pdo 
-		);
-
-		if ( $categoria->rowCount() <= 0 ) {
-			return false;
-		}
-
-		return true;
-
-	}
 
 	public function getProdutos( $categoria, $qtde ) {
 
