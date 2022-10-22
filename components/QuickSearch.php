@@ -7,20 +7,33 @@ import_models (
 
 // # Dados Iniciais
 global $_PDO;
+global $_VALIDACAO;
 
-$pesquisas_rapidas = new PesquisasRapida($_PDO);
+$aviso = "";
+$pesquisas_rapidas = new PesquisasRapida( $_PDO );
+
 
 if ( 
-  isset($_POST['searchInput'] && !empty($_POST['searchInput'])
+  $_VALIDACAO->camposObrigatorios( 
+    array( $_POST['searchInput'], $_POST['searchInput'])
+  )
 ) {
   $pesquisas_rapidas->setTermosPesquisados( $_POST['searchInput'] );
+} else {
+  $aviso = "*Preencha o campo";
 }
+
 ?>
 
 
 <aside class="box-quick-search">
   <div class="title">
     <h3 class="heading">Lorem ipsum dolor sit amet.</h3>
+    
+    <?php if ( empty($aviso) ): ?>
+    <h2 class="heading"> <?php echo $aviso; ?> </h3>
+    <?php endif; ?>
+    
     <div class="underline"></div>
   </div>
 

@@ -1,5 +1,15 @@
 <?php 
 
+// # Dados Iniciais
+session_start();
+
+global $_VALIDACAO;
+
+if ( !$_VALIDACAO->estaLogado( $_SESSION['login'] ) ) {
+  header("Location: views/login.php");
+  exit();
+} 
+
 ?>
 
 <div class="container-cover">
