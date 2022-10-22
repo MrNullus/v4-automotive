@@ -1,6 +1,20 @@
 <?php 
 
+// # Importanto classes necessarias
+import_models (
+  array( 'pesquisas_rapidas' )
+);
 
+// # Dados Iniciais
+global $_PDO;
+
+$pesquisas_rapidas = new PesquisasRapida($_PDO);
+
+if ( 
+  isset($_POST['searchInput'] && !empty($_POST['searchInput'])
+) {
+  $pesquisas_rapidas->setTermosPesquisados( $_POST['searchInput'] );
+}
 ?>
 
 

@@ -1,7 +1,12 @@
 <?php  
 // # Importanto classes necessarias
+<<<<<<< HEAD
+import_models (
+  array( 'produto' )
+=======
 import_class(
   array( 'produto', 'categoria' )
+>>>>>>> afa15ea547abbf5c88189810a7be8a0fc3f1485b
 );
 
 

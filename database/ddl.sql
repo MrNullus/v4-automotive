@@ -74,6 +74,18 @@ CREATE TABLE Produtos (
         REFERENCES Categorias (categoria_id)
 );
 
+-- @ criar tabela categorias (referente aos produtos)
+CREATE TABLE PesquisasRapidas (
+    -- columns
+    pesquisa_rapida_id INT AUTO_INCREMENT,
+    termo VARCHAR(30) NOT NULL UNIQUE,
+
+    -- # constraint
+    PRIMARY KEY (pesquisa_rapida_id)
+    CONSTRAINT fk_produto_id FOREIGN KEY (produto_id)
+        REFERENCES Produtos (produto_id)
+);
+
 -- @ criar tabela vendas
 CREATE TABLE Vendas (
     -- # columns
