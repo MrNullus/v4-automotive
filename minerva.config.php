@@ -6,7 +6,7 @@ require_once('./utils/require_utils.utils.php');
 
 require_utils(
 	array(
-		'import_class',
+		'import_models',
 		'url_base',
 		'renderComponent',
 		'assets'

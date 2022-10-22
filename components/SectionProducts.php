@@ -1,6 +1,6 @@
 <?php  
 // # Importanto classes necessarias
-import_class(
+import_models (
   array( 'produto' )
 );
 
