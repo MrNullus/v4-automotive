@@ -19,8 +19,7 @@ class Produto
 	}
 	
 	
-
-
+	
 	public function getProdutos( $categoria, $qtde ) {
 
 		$stmt = "";

@@ -2,7 +2,7 @@
 
 function require_utils($files) {
 	foreach($files as $file) {
-		require_once('./utils/'.$file.'.utils.php');
+		require_once( dirname(__DIR__). '/utils/' .$file. '.utils.php' );
 	}
 }
 

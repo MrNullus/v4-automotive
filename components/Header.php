@@ -5,18 +5,20 @@ session_start();
 
 global $_VALIDACAO;
 
-if ( !$_VALIDACAO->estaLogado( $_SESSION['login'] ) ) {
-  header("Location: views/login.php");
-  exit();
-} 
+// @ Validar se existe algum usario logado
+// if ( !$_VALIDACAO->estaLogado( $_SESSION['login'] ) ) {
+//   header("Location: views/login.php");
+//   exit();
+
+// } 
 
 ?>
 
 <div class="container-cover">
-  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 header-page"> 
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 header-page border-bottom"> 
 
   <!-- box top -->
-  <div class="container header__box-top">
+  <div class="container  header__box-top">
 
     <!-- single row -->
     <div class="nav col-12 col-md-auto mb-3 justify-content-between mb-md-0 row-top">
@@ -71,6 +73,7 @@ if ( !$_VALIDACAO->estaLogado( $_SESSION['login'] ) ) {
 
   <!-- navbar categories -->
   <?php renderComponent( 'NavbarCategories' ); ?>
+
 
   </header>
 </div>

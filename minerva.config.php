@@ -2,17 +2,18 @@
 
 $_PDO = new PDO("mysql:host=localhost;dbname=v4_automotive", "root", "");
 
-require_once('./core/Validacao.php');
-require_once('./utils/require_utils.utils.php');
+include('core/Validacao.php');
+include('utils/require_utils.utils.php');
 
-$validacao = new Validacao();
+$_VALIDACAO = new Validacao();
 
 require_utils(
 	array(
-		'import_models',
-		'url_base',
 		'renderComponent',
-		'assets'
+		'import_models',
+		'urls',
+		'assets',
+		'go_to'
 	)
 );
 

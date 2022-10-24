@@ -1,6 +1,7 @@
 <?php  
+
 // # Importanto classes necessarias
-import_class(
+import_models(
   array( 'categoria' )
 );
 
@@ -11,9 +12,9 @@ $categoria = new Categoria($_PDO);
 
 $categorias = $categoria->getCategorias();
 
-print_r($categorias);
-?>
+// print_r($categorias);
 
+?>
 
 
 <div class="container mb-4">
