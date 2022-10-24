@@ -1,12 +1,8 @@
 <?php  
 // # Importanto classes necessarias
-<<<<<<< HEAD
-import_models (
-  array( 'produto' )
-=======
-import_class(
+
+import_models(
   array( 'produto', 'categoria' )
->>>>>>> afa15ea547abbf5c88189810a7be8a0fc3f1485b
 );
 
 
@@ -17,6 +13,8 @@ $produto   = new Produto($_PDO);
 $categoria = new Categoria($_PDO);
 
 $todosOsProdutos = array();
+$produtosCategoriaAtual = array();
+
 $listaCategorias = array(
   'Peças', 'Motores', 'Oleos'
 );
@@ -33,7 +31,7 @@ foreach ($listaCategorias as $item) {
   }  
 
 }
-$produtosCategoriaAtual = array();
+
 $countQtdeCategorias = count(array_keys( $todosOsProdutos ));
 
 
@@ -80,7 +78,9 @@ for ($i = 0; $i < $countQtdeCategorias; $i++):
           </p>
         </div>
 
-        <!-- TODO: Proximo passo
+        <!-- 
+            TODO: 
+              - Proximo passo colocar um sistema de classificação
         <div class="box-avaliations">
           <span>*</span>
           <span>*</span>

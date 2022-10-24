@@ -27,8 +27,10 @@ $data = array(
   <?php foreach ($data as $item): ?>
   <!-- single row -->
   <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3">
+
     <!-- single col -->
     <div class="col">
+
       <!-- card -->
       <div 
         style="background-image: url(<?php echo assets('img/brandings', $item['bg-image']); ?>);"
@@ -49,9 +51,12 @@ $data = array(
         </div>
       </div>
       <!-- end card -->  
+
     </div>
     <!-- end col -->
+
   </div>
   <!-- end row -->
   <?php endforeach; ?>
+  
 </div>
