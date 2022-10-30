@@ -9,7 +9,6 @@ global $_VALIDACAO;
 // if ( !$_VALIDACAO->estaLogado( $_SESSION['login'] ) ) {
 //   header("Location: views/login.php");
 //   exit();
-
 // } 
 
 ?>

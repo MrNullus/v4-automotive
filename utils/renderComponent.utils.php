@@ -1,7 +1,7 @@
 <?php
 
 function renderComponent( $componente ) {
-  require_once('./components/'.$componente.'.php');
+  require_once(dirname(__DIR__) .'/components/'. $componente .'.php');
 }
 
 ?>

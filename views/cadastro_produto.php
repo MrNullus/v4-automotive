@@ -1,5 +1,28 @@
 <?php  
-require_once 'minerva.config.php';
+require_once dirname(__DIR__). '\minerva.config.php';
+
+$response_cadastro = "";
+
+if ( isset($_GET['f']) && !empty($_GET['f']) ) {
+
+  $response_cadastro = $_GET['f'];  
+
+  if ($response_cadastro == "success") {
+    $_SESSION[ 'msgCadastroProduto' ] = array(
+      "title"  => "sucesso !",
+      "msg"    => "Produto cadastrado com Sucesso!",
+      "action" => "success"
+    );
+  } else {
+    $_SESSION[ 'msgCadastroProduto' ] = array(
+      "title"  => "Ops!",
+      "msg"    => "Produto não cadastrado...",
+      "action" => "error"
+    );
+  }
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +60,18 @@ require_once 'minerva.config.php';
       rel="stylesheet" 
       href="<?php echo assets( 'css', 'global.css' ); ?>" 
     />
+
+    <!--===== Linkando a biblioteca Sweet =====-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+    <script type="text/javascript">
+      if (sessionStorage.getItem("msgCadastroProduto") !== null) {
+        swal(
+          sessionStorage.getItem("msgCadastroProduto")['title'], 
+          sessionStorage.getItem("msgCadastroProduto")['msg'],
+          sessionStorage.getItem("msgCadastroProduto")['action']
+        );
+      }
+    </script>
   </head>
 
   <body>
@@ -50,7 +85,9 @@ require_once 'minerva.config.php';
 
       <main id="root">
 
-        
+        <!-- form produto -->
+        <?php renderComponent('FormProduto'); ?>
+        <!-- end of form produto -->  
         
       </main>
 
@@ -68,7 +105,6 @@ require_once 'minerva.config.php';
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
       crossorigin="anonymous">
     </script>
-
 
   </body>
 

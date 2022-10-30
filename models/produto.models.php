@@ -61,6 +61,28 @@ class Produto
 
 	}
 
+	public function cadastrar($dados) {
+
+		$stmt = "
+			INSERT INTO 
+				Produtos 
+					(nome, img, categoria_id, unidade, preco, descricao, obs)
+				VALUES
+					(:nome, :img, :categoria_id, :unidade, :preco, :descricao, :obs)
+		";
+
+		$find_array = $dados;
+
+		$stmt = prepare_query( $stmt, $find_array, $this->pdo );
+
+		if ( $stmt->rowCount() > 0 ) {
+			return true;
+		}	
+
+		return true;
+		
+	}
+
 }
 
 ?>
