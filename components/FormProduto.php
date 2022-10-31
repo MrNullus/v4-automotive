@@ -88,10 +88,11 @@ button {
 </style>
 
 <form class="container form-produto" action="<?php echo url_controllers('CadastroProduto'); ?>" method="POST">
+  <input type="text" id="guardar_session" value="<?php echo $response_cadastro ?>"/>
 
   <div class="heading">
     <!-- mensagem de resposta do cadastro -->
-    <?php if (isset( $response_cadastro )) { ?>
+    <?php if (isset( $response_cadastro ) && !empty( $response_cadastro )) { ?>
       <!-- mensagem de erro -->
       <?php if ( $response_cadastro == "error" ) { ?>  
       <h2 class="text-alert"> 

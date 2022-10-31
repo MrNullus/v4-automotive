@@ -63,7 +63,9 @@ if ( isset($_GET['f']) && !empty($_GET['f']) ) {
 
     <!--===== Linkando a biblioteca Sweet =====-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
-    <script type="text/javascript">
+    <?php
+    echo '
+	<script type="text/javascript">
       if (sessionStorage.getItem("msgCadastroProduto") !== null) {
         swal(
           sessionStorage.getItem("msgCadastroProduto")['title'], 
@@ -72,6 +74,8 @@ if ( isset($_GET['f']) && !empty($_GET['f']) ) {
         );
       }
     </script>
+	';
+    ?>
   </head>
 
   <body>
