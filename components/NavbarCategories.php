@@ -10,9 +10,7 @@ global $_PDO;
 
 $categoria = new Categoria($_PDO);
 
-$categorias = $categoria->getCategorias();
-
-// print_r($categorias);
+$categorias = $categoria->getNomeCategorias();
 
 ?>
 

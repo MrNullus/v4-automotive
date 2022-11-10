@@ -1,0 +1,1 @@
+INSERT INTO `categorias` (`categoria_id`, `nome`) VALUES (NULL, 'Oleos de Motor'), (NULL, 'Pneu');

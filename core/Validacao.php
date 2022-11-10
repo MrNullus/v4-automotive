@@ -2,9 +2,6 @@
 
 class Validacao {
 	
-	// TODO:
-	// - Fazer os metodos para validações
-	
 	public function camposObrigatorios( $campos ) {
 		
 		$qtdeRequeridaCamposValidos = count( $campos );

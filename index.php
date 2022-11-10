@@ -119,7 +119,7 @@ require_once 'minerva.config.php';
           </div>
         </div>
         <!-- end hero container -->
-        
+
         <!-- box section products -->
         <?php renderComponent( 'SectionProducts' ); ?>  
         <!-- box section products -->

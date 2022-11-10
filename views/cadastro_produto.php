@@ -1,5 +1,5 @@
 <?php  
-require_once 'minerva.config.php';
+require_once dirname(__DIR__). '\minerva.config.php';
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +37,20 @@ require_once 'minerva.config.php';
       rel="stylesheet" 
       href="<?php echo assets( 'css', 'global.css' ); ?>" 
     />
+    <link 
+      rel="stylesheet" 
+      href="<?php echo assets( 'css', 'FormProduto.css' ); ?>" 
+    />
+
+    <!-- Scripts -->
+    <script 
+      src="<?php echo assets( 'js', 'validacoes.js' ); ?>">
+    </script>
+
+    <!-- Linkando a biblioteca Sweet -->
+    <script 
+      src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+    </script>
   </head>
 
   <body>
@@ -49,6 +63,10 @@ require_once 'minerva.config.php';
       <!-- end of header main -->
 
       <main id="root">
+
+        <!-- form produto -->
+        <?php renderComponent('FormProduto'); ?>
+        <!-- end of form produto -->  
         
       </main>
 
@@ -66,7 +84,6 @@ require_once 'minerva.config.php';
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
       crossorigin="anonymous">
     </script>
-
 
   </body>
 

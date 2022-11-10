@@ -6,7 +6,7 @@ function url_base() {
 
 
 function url_controllers( $file ) {
-  return url_base() .'/controllers/'. $file .'.controllers.php';
+  return url_base() .'/controllers/'. $file .'.controller.php';
 }
 
 ?>

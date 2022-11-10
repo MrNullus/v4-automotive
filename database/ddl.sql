@@ -82,8 +82,6 @@ CREATE TABLE PesquisasRapidas (
 
     -- # constraint
     PRIMARY KEY (pesquisa_rapida_id)
-    CONSTRAINT fk_produto_id FOREIGN KEY (produto_id)
-        REFERENCES Produtos (produto_id)
 );
 
 -- @ criar tabela vendas

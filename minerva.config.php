@@ -2,8 +2,8 @@
 
 $_PDO = new PDO("mysql:host=localhost;dbname=v4_automotive", "root", "");
 
-include('core/Validacao.php');
-include('utils/require_utils.utils.php');
+require('core/Validacao.php');
+require('utils/require_utils.utils.php');
 
 $_VALIDACAO = new Validacao();
 
