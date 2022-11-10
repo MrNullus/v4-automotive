@@ -1,28 +1,5 @@
 <?php  
 require_once dirname(__DIR__). '\minerva.config.php';
-
-$response_cadastro = "";
-
-if ( isset($_GET['f']) && !empty($_GET['f']) ) {
-
-  $response_cadastro = $_GET['f'];  
-
-  if ($response_cadastro == "success") {
-    $_SESSION[ 'msgCadastroProduto' ] = array(
-      "title"  => "sucesso !",
-      "msg"    => "Produto cadastrado com Sucesso!",
-      "action" => "success"
-    );
-  } else {
-    $_SESSION[ 'msgCadastroProduto' ] = array(
-      "title"  => "Ops!",
-      "msg"    => "Produto não cadastrado...",
-      "action" => "error"
-    );
-  }
-
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -60,22 +37,20 @@ if ( isset($_GET['f']) && !empty($_GET['f']) ) {
       rel="stylesheet" 
       href="<?php echo assets( 'css', 'global.css' ); ?>" 
     />
+    <link 
+      rel="stylesheet" 
+      href="<?php echo assets( 'css', 'FormProduto.css' ); ?>" 
+    />
 
-    <!--===== Linkando a biblioteca Sweet =====-->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
-    <?php
-    echo '
-	<script type="text/javascript">
-      if (sessionStorage.getItem("msgCadastroProduto") !== null) {
-        swal(
-          sessionStorage.getItem("msgCadastroProduto")['title'], 
-          sessionStorage.getItem("msgCadastroProduto")['msg'],
-          sessionStorage.getItem("msgCadastroProduto")['action']
-        );
-      }
+    <!-- Scripts -->
+    <script 
+      src="<?php echo assets( 'js', 'validacoes.js' ); ?>">
     </script>
-	';
-    ?>
+
+    <!-- Linkando a biblioteca Sweet -->
+    <script 
+      src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+    </script>
   </head>
 
   <body>

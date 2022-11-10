@@ -42,11 +42,31 @@ class Categoria
 	}
 
 
-	public function getCategorias() {
+	public function getNomeCategorias() {
 
 		$stmt = "
 			SELECT 
 				nome 
+			FROM 
+				Categorias 
+		";
+
+		$stmt = $this->pdo->query($stmt);
+
+		if ($stmt->rowCount() > 0) {
+			$stmt = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$this->categorias = $stmt;
+		}
+
+		return $this->categorias;
+
+	}
+
+	public function getCategorias() {
+
+		$stmt = "
+			SELECT 
+				*
 			FROM 
 				Categorias 
 		";

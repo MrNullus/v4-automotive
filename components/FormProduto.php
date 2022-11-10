@@ -2,111 +2,53 @@
 
 //  TODO:
 // Fazer o select de categorias estar dinamico (receber e exbir categorias vindas do banco)
+$_ACTION_CAD_PRODUTO = array();
+$response_cadastro = "";
 
+if ( isset($_GET['f']) && !empty($_GET['f']) ) {
+
+  $response_cadastro = $_GET['f'];  
+
+  if ($response_cadastro == "success") {
+    $_SESSION[ 'msgCadastroProduto' ] = array(
+      "title"  => "sucesso !",
+      "msg"    => "Produto cadastrado com Sucesso!",
+      "action" => "success"
+    );
+  } else {
+    $_SESSION[ 'msgCadastroProduto' ] = array(
+      "title"  => "Ops!",
+      "msg"    => "Produto não cadastrado...",
+      "action" => "error"
+    );
+  }
+
+  $_ACTION_CAD_PRODUTO = $_SESSION[ 'msgCadastroProduto' ];
+}
 ?>
 
 
-<style>
-.text-alert,
-.text-success {
-  color: #f1f1f1;
-  width: 100%;
-  padding: 1.2rem;
-  text-align: center;
-  margin: 2rem 0;
-  border-radius: 11px;
-  font-size: 1.2rem!important;
-  font-weight: 600;
-  box-shadow: 2px 2px 4px #c3c3c3;
-}
-
-.text-alert{
-  background-color: #ff1616;
-}
-.text-success {
-  background-color: #16FF67;
-  color: #262626!important;
-}
-
-.form-produto .row {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.row > * {
-  padding: 0;
-}
-
-.row-input-group {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
-}
-
-.row-input-group > div {
-  width: 50%;
-  height: 40px;
-}
-
-.form-floating {
-  padding-left: 0.12rem;
-}
-
-.form-control-unidade {
-  margin: 0;
-}
-
-.group-button {
-  display: flex;
-  flex: 1 auto;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.group-button, 
-input[type=submit],
-button {
-  min-width: 50%;
-}
-
-.btn-cadastar {
-  background: #000;
-  color: white;
-}
-.btn-cadastar:hover {
-  border-color: #000;
-}
-.btn-limpar {
-  background: #fe1616;
-  color: white;
-}
-.btn-limpar:hover {
-  border-color: #fe1616;
-}
-</style>
-
-<form class="container form-produto" action="<?php echo url_controllers('CadastroProduto'); ?>" method="POST">
-  <input type="text" id="guardar_session" value="<?php echo $response_cadastro ?>"/>
+<form class="container form-produto" action="<?php echo url_controllers('CadastroProduto'); ?>" onsubmit="return validarForm()" method="POST">
 
   <div class="heading">
     <!-- mensagem de resposta do cadastro -->
-    <?php if (isset( $response_cadastro ) && !empty( $response_cadastro )) { ?>
-      <!-- mensagem de erro -->
-      <?php if ( $response_cadastro == "error" ) { ?>  
-      <h2 class="text-alert"> 
-        <?php echo $_SESSION[ 'msgCadastroProduto' ]; ?> 
-      </h2>
-      <?php } ?>
+    <?php if (isset($response_cadastro) && !empty($response_cadastro)): ?>
+
+      <!-- mensagem de esrro -->
+      <?php if ( $response_cadastro == "error" ): ?>  
+        <h2 class="text-alert"> 
+        <?php echo $_ACTION_CAD_PRODUTO['title']. " " .$_ACTION_CAD_PRODUTO['msg'];?> 
+        </h2>
+      <?php endif; ?>
 
       <!--  mensagem de sucesso -->
-      <?php if ( $response_cadastro == "success" ) { ?>  
-      <h2 class="text-success"> 
-        <?php echo $_SESSION[ 'msgCadastroProduto' ]; ?> 
-      </h2>
-      <?php } ?>
-    <?php } ?>
+      <?php if ( $response_cadastro == "success" ): ?>  
+        <h2 class="text-success"> 
+        <?php echo $_ACTION_CAD_PRODUTO['msg'];?> 
+        </h2>
+      <?php endif; ?>
+
+    <?php endif; ?>
   </div>
 
   <div class="row">
@@ -120,15 +62,7 @@ button {
       <input class="form-control" type="file" name="inputImage" id="inputImage" multiple />
     </div>
 
-    <div class="form-floating">
-      <select class="form-select" id="slctCategorias" name="slctCategorias" aria-label="Floating label select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-      <label for="slctCategorias">Categorias</label>
-    </div>
+    <?php renderComponent('CategoriasProduto'); ?>
 
     <div class="row-input-group">
       <div>
@@ -140,7 +74,7 @@ button {
 
       <div class="input-group">
         <span class="input-group-text">$</span>
-        <input type="text" class="form-control" id="txtPreco" name="txtPreco" aria-label="Preço em reais)" />
+        <input type="text" class="form-control" id="txtPreco" name="txtPreco" aria-label="Preço em reais" />
       </div>
     </div>
 
