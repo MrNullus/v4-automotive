@@ -1,0 +1,23 @@
+/**********
+	Section
+Feauteres
+***********/
+
+.card-container {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;	
+}
+
+.card-overlay {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card-overlay h3 {
+	font-size: 1.6rem!important;
+}
+
+.card-overlay h3,
+.card-overlay ul li small {
+	color: #fff;
+}

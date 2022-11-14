@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="<?php echo assets( 'css', 'sectionFeatures.css' ); ?>">
+
 <?php  
 // # Data Initial
 $data = array(
@@ -34,9 +36,9 @@ $data = array(
       <!-- card -->
       <div 
         style="background-image: url(<?php echo assets('img/brandings', $item['bg-image']); ?>);"
-        class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg"
+        class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg card-container"
       >
-        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 card-overlay">
           <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold text-color-primary">
             <?php echo $item['title']; ?>
           </h3>

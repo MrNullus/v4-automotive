@@ -19,31 +19,7 @@
     <div class="col mb-3">
     </div>
 
-    <!-- media socials -->
-    <div class="col mb-3">
-      <h5><strong>Media socials</strong></h5>
-
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Media 1</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Media 2</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Media 3</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Media 4</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Media 5</a></li>
-      </ul>
-    </div>
-
-    <!-- features payments -->
-    <div class="col mb-3 features-payments">
-      <h5><strong>Features Payments</strong></h5>
-      
-      <ul class="nav flex-column list-payments">
-        <!-- list payments -->
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted item-payment">Payment 1</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted item-payment">Payment 2</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted item-payment">Payment 3</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted item-payment">Payment 4</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted item-payment">Payment 5</a></li>
-      </ul>
-    </div>
+    <?php renderComponent( 'FooterContacts' ); ?>
+    
   </footer>
 </div>

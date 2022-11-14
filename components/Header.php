@@ -3,14 +3,6 @@
 // # Dados Iniciais
 session_start();
 
-global $_VALIDACAO;
-
-// @ Validar se existe algum usario logado
-// if ( !$_VALIDACAO->estaLogado( $_SESSION['login'] ) ) {
-//   header("Location: views/login.php");
-//   exit();
-// } 
-
 ?>
 
 <div class="container-cover">
@@ -24,7 +16,7 @@ global $_VALIDACAO;
       <a href="./">
         <img 
           class="image rounded-3 logo-header logo-header"
-          src="<?php echo assets('img/logo', 'v4automotive.png') ?>" 
+          src="<?php echo assets('img/logo', 'v4automotive.png'); ?>" 
           alt="V4 Automotive" 
           aria-label="V4 Automotive"
         />
@@ -72,7 +64,6 @@ global $_VALIDACAO;
 
   <!-- navbar categories -->
   <?php renderComponent( 'NavbarCategories' ); ?>
-
 
   </header>
 </div>

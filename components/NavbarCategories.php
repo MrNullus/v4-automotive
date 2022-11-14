@@ -1,5 +1,4 @@
 <?php  
-
 // # Importanto classes necessarias
 import_models(
   array( 'categoria' )
@@ -11,7 +10,6 @@ global $_PDO;
 $categoria = new Categoria($_PDO);
 
 $categorias = $categoria->getNomeCategorias();
-
 ?>
 
 
@@ -22,13 +20,14 @@ $categorias = $categoria->getNomeCategorias();
       </button> 
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 list-links">
-        <li class="nav-link"><a href="#">Item 1</a></li>
-        <li class="nav-link"><a href="#">Item 2</a></li>
-        <li class="nav-link"><a href="#">Item 3</a></li>
-        <li class="nav-link"><a href="#">Item 4</a></li>
-        <li class="nav-link"><a href="#">Item 4</a></li>
-        <li class="nav-link"><a href="#">Item 4</a></li>
-        <li class="nav-link"><a href="#">Item 4</a></li>
+        <?php foreach($categorias as $categoria): ?>
+        <li class="nav-link">
+          <a 
+            href="../views/catalogo.php?c=<?php echo mb_strtolower($categoria['nome']); ?>">
+            <?php echo $categoria['nome']; ?>  
+          </a>
+        </li>  
+        <?php endforeach; ?>
       </ul>        
     </nav>
  </div>

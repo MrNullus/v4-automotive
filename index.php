@@ -127,7 +127,7 @@ require_once 'minerva.config.php';
       </main>
 
       <!-- footer -->
-      <?php renderComponent( 'Footer'); ?>
+      <?php renderComponent( 'Footer' ); ?>
       <!-- end of footer -->
 
     </div>
