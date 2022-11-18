@@ -79,15 +79,16 @@ for ($i = 0; $i < $countQtdeCategorias; $i++):
         </div>
 
         <!-- 
-            TODO: 
-              - Proximo passo colocar um sistema de classificação
-        <div class="box-avaliations">
-          <span>*</span>
-          <span>*</span>
-          <span>*</span>
-          <span>*</span>
-          <span>*</span>
-        </div> -->
+		TODO: 
+			- Proximo passo colocar um sistema de classificação
+			<div class="box-avaliations">
+			  <span>*</span>
+			  <span>*</span>
+			  <span>*</span>
+			  <span>*</span>
+			  <span>*</span>
+			</div> 
+		-->
 
         <div class="product-btns">
           <a href="#" class="btn btn-sale">Comprar</a>
