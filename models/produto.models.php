@@ -18,9 +18,43 @@ class Produto
 		$this->pdo = $pdo;
 	}
 	
+	/*
+		TODO:
+			- Adaptar método getProdutos para retornar todos os produtos cadastrados
+			- Atualizar a implementação da mesma em cada view
+	*/
+	public function getProdutos() {
+
+		$stmt = "";
+		$produtos = array();
+
+		$stmt = "
+			SELECT
+				P.nome,
+				P.img,
+				C.nome as categoria,
+				P.unidade,
+				P.preco,
+				P.descricao,
+				P.obs
+
+			FROM
+				Produtos P,
+				Categorias C
+
+			WHERE 
+				P.categoria_id = C.categoria_id 
+		";
+
+		$find_array = array( ':categoria' => $categoria );
+
+		$stmt = prepare_query( $stmt, $find_array, $this->pdo );
+
+		return $produtos;
+
+	}
 	
-	
-	public function getProdutos( $categoria, $qtde ) {
+	public function getProdutosDaCategoria( $categoria, $qtde ) {
 
 		$stmt = "";
 		$clausulaDeQtde = "";
