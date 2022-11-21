@@ -13,6 +13,7 @@
 
 body {
 	font-family: 'Source Sans Pro', sans-serif!important;
+	overflow-x: hidden!important;
 }
 
 
@@ -86,4 +87,17 @@ body {
 .header__navbar-main ul li a,
 .header__navbar-categories ul li a {
 	color: var(--color-dark-500);
+}
+
+
+.link-media-socials i {
+	color: #222;
+	font-size: 1.25rem!important;
+}
+
+.link-media-socials i:hover {
+	transition: 0.67 linear;
+	transform: scale(1.6);
+	cursor: pointer;
+	color: var(--color-primary);
 }
