@@ -1,0 +1,47 @@
+.box-quick-search {
+	margin-bottom: 2rem;
+}
+
+
+form {
+	padding: 0;
+}
+
+.box-search-recents {
+	margin-top: 1.2rem;
+}
+
+.btn-search {
+	background-color: #dc3545!important;
+  height: 41.97px;
+  width: 70px;
+  border: none;
+}
+		
+.btn-search:hover {
+	color: #373b3e;
+	background-color: #fff!important;;
+	border: 2px solid #000;
+}
+
+
+.box-search-recents .subheading {
+	font-weight: 700;
+}
+
+.list-recents {
+	border-bottom: 2px solid black;
+	padding: 1rem 2rem;
+}
+
+.item-recent a {
+	color: #222;
+}
+
+.item-recent:not(:first-child) {
+	margin-top: 0.49rem;
+}
+
+.item-recent:hover {
+	border-bottom: 2px solid #dc3545;
+}

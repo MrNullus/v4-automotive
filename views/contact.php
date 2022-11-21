@@ -1,5 +1,5 @@
 <?php  
-require_once 'minerva.config.php';
+require_once '../minerva.config.php';
 ?>
 
 <html lang="pt-br">
@@ -53,23 +53,8 @@ require_once 'minerva.config.php';
       </div>
 
       <main class="container">
-        <!-- quick search -->
-        <?php renderComponent( 'QuickSearch' ); ?>
-        <!-- end quick search -->
+        
 
-        <!-- banner logo -->
-        <div class="banner-logo">
-          <img src="" alt="V4 Automotive"/>
-        </div>
-        <!-- end banner logo -->
-
-        <!-- section features -->
-        <?php renderComponent( 'SectionFeatures' ); ?>
-        <!-- end section features -->
-
-        <!-- box section products -->
-        <?php renderComponent( 'SectionProducts' ); ?>  
-        <!-- box section products -->
 
       </main>
 
