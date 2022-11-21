@@ -47,13 +47,12 @@ require_once 'minerva.config.php';
       <?php renderComponent('Header'); ?>
       <!-- end of header main -->
 
-      <main id="root">
-        <div class="banner-container">
-          <div class="banner-content" id="banner-main">
-          </div>
+      <div class="banner-container">
+        <div class="banner-content" id="banner-main">
         </div>
+      </div>
 
-      <div class="container">
+      <main class="container">
         <!-- quick search -->
         <?php renderComponent( 'QuickSearch' ); ?>
         <!-- end quick search -->
@@ -67,58 +66,6 @@ require_once 'minerva.config.php';
         <!-- section features -->
         <?php renderComponent( 'SectionFeatures' ); ?>
         <!-- end section features -->
-
-        <!-- section top products -->
-        <section class="section-top-products">
-          <!-- section header -->
-          <header class="section-header">
-            <h3 class="heading">Em alta</h3>
-          </header>
-
-          <!-- boxs -->  
-          <div class="boxs">
-            <!-- single box -->
-            <div class="single-box">
-              <div class="content">
-                <h5 class="name">Coleia de Bicicleta</h5>
-              </div>
-            </div>
-
-            <!-- single box -->
-            <div class="single-box">
-              <div class="content">
-                <h5 class="name">Coleia de Bicicleta</h5>
-              </div>
-            </div>
-
-            <!-- single box -->
-            <div class="single-box">
-              <div class="content">
-                <h5 class="name">Coleia de Bicicleta</h5>
-              </div>
-            </div>
-          </div>   
-        </section>
-        <!-- end section top products -->
-
-        <!-- hero container -->
-        <div class="hero-container">
-          <!-- hero -->
-          <div class="hero">
-            <!-- content -->
-            <div class="hero-content">
-              <div class="title">
-                <h3>Sobre nós</h3>
-                <div class="underline"></div>
-              </div>
-
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, doloribus nisi molestias?</p>
-
-              <a href="#" class="btn btn-learn-more">Saiba mais</a>
-            </div>
-          </div>
-        </div>
-        <!-- end hero container -->
 
         <!-- box section products -->
         <?php renderComponent( 'SectionProducts' ); ?>  
