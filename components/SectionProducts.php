@@ -25,7 +25,7 @@ foreach ($listaCategorias as $item) {
 
   if ( $categoria->categoriaExiste( $item ) ) {
     $produtosRecebidos = array();
-    $produtosRecebidos = $produto->getProdutos( $item,  'all');
+    $produtosRecebidos = $produto->getProdutosDaCategoria( $item,  'all');
 
     $todosOsProdutos[ $item ] = $produtosRecebidos;
   }  

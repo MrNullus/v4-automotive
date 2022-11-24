@@ -46,9 +46,12 @@ class Produto
 				P.categoria_id = C.categoria_id 
 		";
 
-		$find_array = array( ':categoria' => $categoria );
 
-		$stmt = prepare_query( $stmt, $find_array, $this->pdo );
+		$stmt = $this->pdo->query($stmt);
+
+		if ($stmt->rowCount() > 0) {
+			$produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		}
 
 		return $produtos;
 
