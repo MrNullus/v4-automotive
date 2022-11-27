@@ -30,6 +30,7 @@ class Produto
 
 		$stmt = "
 			SELECT
+				P.produto_id as id,
 				P.nome,
 				P.img,
 				C.nome as categoria,
@@ -39,16 +40,19 @@ class Produto
 				P.obs
 
 			FROM
-				Produtos P,
-				Categorias C
+				Produtos as P,
+				Categorias as C
 
 			WHERE 
 				P.categoria_id = C.categoria_id 
 		";
 
-		$find_array = array( ':categoria' => $categoria );
 
-		$stmt = prepare_query( $stmt, $find_array, $this->pdo );
+		$stmt = $this->pdo->query($stmt);
+
+		if ($stmt->rowCount() > 0) {
+			$produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		}
 
 		return $produtos;
 
@@ -66,6 +70,7 @@ class Produto
 
 		$stmt = "
 			SELECT
+				P.produto_id as id,
 				P.nome,
 				P.img,
 				C.nome as categoria,
