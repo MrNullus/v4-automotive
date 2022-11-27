@@ -30,6 +30,7 @@ class Produto
 
 		$stmt = "
 			SELECT
+				P.produto_id as id,
 				P.nome,
 				P.img,
 				C.nome as categoria,
@@ -39,8 +40,8 @@ class Produto
 				P.obs
 
 			FROM
-				Produtos P,
-				Categorias C
+				Produtos as P,
+				Categorias as C
 
 			WHERE 
 				P.categoria_id = C.categoria_id 
@@ -69,6 +70,7 @@ class Produto
 
 		$stmt = "
 			SELECT
+				P.produto_id as id,
 				P.nome,
 				P.img,
 				C.nome as categoria,

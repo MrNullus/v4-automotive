@@ -16,6 +16,10 @@ body {
 	overflow-x: hidden!important;
 }
 
+p {
+	word-break: break-word!important;
+}
+
 
 /**********
 	Classes 
@@ -30,6 +34,10 @@ body {
 	width: 199px;
 }
 
+.btn:hover {
+	opacity: 0.69;
+}
+
 .btn-dropdown {
 	display: none;
 }
@@ -38,6 +46,9 @@ body {
 	color: var(--color-primary);
 }
 
+.section-header .heading {
+	font-size: 1.6rem!important;
+}
 
 /**********
 	Page
