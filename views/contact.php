@@ -1,8 +1,7 @@
 <?php  
-require_once dirname(__DIR__). '\minerva.config.php';
+require_once '../minerva.config.php';
 ?>
 
-<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!--===== Meta Tags =====-->
@@ -37,20 +36,6 @@ require_once dirname(__DIR__). '\minerva.config.php';
       rel="stylesheet" 
       href="<?php echo assets( 'css', 'global.css' ); ?>" 
     />
-    <link 
-      rel="stylesheet" 
-      href="<?php echo assets( 'css', 'FormProduto.css' ); ?>" 
-    />
-
-    <!-- Scripts -->
-    <script 
-      src="<?php echo assets( 'js', 'validacoes.js' ); ?>">
-    </script>
-
-    <!-- Linkando a biblioteca Sweet -->
-    <script 
-      src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
-    </script>
   </head>
 
   <body>
@@ -62,16 +47,19 @@ require_once dirname(__DIR__). '\minerva.config.php';
       <?php renderComponent('Header'); ?>
       <!-- end of header main -->
 
-      <main id="root">
+      <div class="banner-container">
+        <div class="banner-content" id="banner-main">
+        </div>
+      </div>
 
-        <!-- form produto -->
-        <?php renderComponent('FormProduto'); ?>
-        <!-- end of form produto -->  
+      <main class="container">
         
+
+
       </main>
 
       <!-- footer -->
-      <?php renderComponent('Footer'); ?>
+      <?php renderComponent( 'Footer' ); ?>
       <!-- end of footer -->
 
     </div>
@@ -85,6 +73,7 @@ require_once dirname(__DIR__). '\minerva.config.php';
       crossorigin="anonymous">
     </script>
 
+
   </body>
 
-</html>
+</html>'

@@ -13,6 +13,11 @@
 
 body {
 	font-family: 'Source Sans Pro', sans-serif!important;
+	overflow-x: hidden!important;
+}
+
+p {
+	word-break: break-word!important;
 }
 
 
@@ -29,6 +34,11 @@ body {
 	width: 199px;
 }
 
+.btn:hover {
+	background-color: transparent!important;
+	color: var(--color-dark-500)!important;
+}
+
 .btn-dropdown {
 	display: none;
 }
@@ -37,6 +47,9 @@ body {
 	color: var(--color-primary);
 }
 
+.section-header .heading {
+	font-size: 1.6rem!important;
+}
 
 /**********
 	Page
@@ -88,7 +101,22 @@ body {
 	color: var(--color-dark-500);
 }
 
-/**********
-	Footer
-***********/
+.link-active:hover {
+	background-color: black!important;
+}
 
+.link-active:hover a {
+	color: white!important;
+}
+
+.link-media-socials i {
+	color: #222;
+	font-size: 1.25rem!important;
+}
+
+.link-media-socials i:hover {
+	transition: 0.67 linear;
+	transform: scale(1.6);
+	cursor: pointer;
+	color: var(--color-primary);
+}

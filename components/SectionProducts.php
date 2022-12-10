@@ -1,6 +1,12 @@
+<link 
+  rel="stylesheet" 
+  href="<?php echo assets( 'css', 'sectionProducts.css' ); ?>" 
+/>
+
+
 <?php  
 // # Importanto classes necessarias
-import_class(
+import_models(
   array( 'produto', 'categoria' )
 );
 
@@ -11,10 +17,15 @@ global $_PDO;
 $produto   = new Produto($_PDO);
 $categoria = new Categoria($_PDO);
 
-$todosOsProdutos = array();
+$todosOsProdutos        = array();
+$produtosCategoriaAtual = array();
+
 $listaCategorias = array(
-  'Peças', 'Motores', 'Oleos'
+  'Peças', 'Motores', 'Baterias de Carro'
 );
+
+$qtdeMaximaDeProdutos = 10;
+$qtdeAtualDeProdutos  = 0;
 
 
 // # Pegar os produtos cadastrado
@@ -22,13 +33,13 @@ foreach ($listaCategorias as $item) {
 
   if ( $categoria->categoriaExiste( $item ) ) {
     $produtosRecebidos = array();
-    $produtosRecebidos = $produto->getProdutos( $item,  'all');
+    $produtosRecebidos = $produto->getProdutosDaCategoria( $item,  'all');
 
     $todosOsProdutos[ $item ] = $produtosRecebidos;
   }  
 
 }
-$produtosCategoriaAtual = array();
+
 $countQtdeCategorias = count(array_keys( $todosOsProdutos ));
 
 
@@ -55,42 +66,60 @@ for ($i = 0; $i < $countQtdeCategorias; $i++):
     <!-- boxs -->
     <div class="boxs">
 
-      <?php foreach($produtosCategoriaAtual as $produto): ?>
-      <!-- single box -->
-      <div class="single-box">
-        
-        <div class="info-product">
-          <h5 class="name"> 
-            <?php echo $produto['nome']; ?>
-          </h5>
+      <?php 
+      foreach($produtosCategoriaAtual as $produto) { 
+        $qtdeAtualDeProdutos++;
+      ?>
+        <?php if ($qtdeAtualDeProdutos != $qtdeMaximaDeProdutos): ?>
+        <!-- single box -->
+        <div class="single-box">
+          
+          <div class="info-product">
+            <h5 class="name"> 
+              <?php echo $produto['nome']; ?>
+            </h5>
 
-          <span class="price">
-            <?php echo $produto['preco']; ?>
-          </span>
-          <span class="unid">
-            <?php echo $produto['unidade']; ?>
-          </span>
-          <p class="short-desc">
-            <?php echo $produto['descricao']; ?>
-          </p>
+            <div 
+              style="background-image: url(<?php echo assets( 'img/produtos', $produto['img']); ?>)" 
+              class="img"
+            >
+            </div>
+
+            <span class="price">
+              R$ <?php echo $produto['preco']; ?>
+            </span>
+            </span>
+            <p class="short-desc">
+              Descrição:
+              <span><?php echo $produto['descricao']; ?></span>
+            </p>
+          </div>
+
+          <!-- 
+        		TODO: 
+        			- Proximo passo colocar um sistema de classificação
+        			<div class="box-avaliations">
+        			  <span>*</span>
+        			  <span>*</span>
+        			  <span>*</span>
+        			  <span>*</span>
+        			  <span>*</span>
+        			</div> 
+      		-->
+
+          <div class="product-btns">
+            <a 
+              href="./views/produto.php?p=<?php echo $produto['id']; ?>" 
+              class="btn btn-sale"
+            >
+              Comprar agora
+            </a>
+            <button class="btn btn-card">+</button>
+          </div>
         </div>
-
-        <!-- TODO: Proximo passo
-        <div class="box-avaliations">
-          <span>*</span>
-          <span>*</span>
-          <span>*</span>
-          <span>*</span>
-          <span>*</span>
-        </div> -->
-
-        <div class="product-btns">
-          <a href="#" class="btn btn-sale">Comprar</a>
-          <button class="btn-card">+</button>
-        </div>
-      </div>
-      <!-- end single box -->
-      <?php endforeach; ?>
+        <!-- end single box -->
+        <?php endif; ?>
+      <?php } ?>
 
     </div>   
     <!-- end boxs -->

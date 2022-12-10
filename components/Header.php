@@ -1,19 +1,22 @@
 <?php 
 
+// # Dados Iniciais
+session_start();
+
 ?>
 
 <div class="container-cover">
-  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 header-page"> 
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 header-page border-bottom"> 
 
   <!-- box top -->
-  <div class="container header__box-top">
+  <div class="container  header__box-top">
 
     <!-- single row -->
     <div class="nav col-12 col-md-auto mb-3 justify-content-between mb-md-0 row-top">
       <a href="./">
         <img 
           class="image rounded-3 logo-header logo-header"
-          src="<?php echo assets('img/logo', 'v4automotive.png') ?>" 
+          src="<?php echo assets('img/logo', 'v4automotive.png'); ?>" 
           alt="V4 Automotive" 
           aria-label="V4 Automotive"
         />
@@ -21,7 +24,7 @@
 
       <div class="col-md-3 text-end">
         <a 
-          href="../views/login.php" 
+          href="<?php echo url_base(); ?>/views/login.php" 
           class="btn btn-danger btn-login"
           title="Login" 
         >
@@ -52,9 +55,9 @@
       </button>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 list-link">
-        <li class="nav-link btn link-active btn-outline"><a class="text-dark" href="./">Home</a></li>
-        <li class="nav-link"><a href="#">Contato</a></li>
-        <li class="nav-link"><a href="#">Sobre nos</a></li>
+        <li class="nav-link btn link-active btn-outline"><a class="text-dark" href="<?php echo url_base(); ?>">Home</a></li>
+        <li class="nav-link"><a href="<?php echo url_base(); ?>/views/contact.php">Contato</a></li>
+        <li class="nav-link"><a href="<?php echo url_base(); ?>/views/aboutus.php">Sobre nos</a></li>
       </ul>
     </nav>
   </div>
