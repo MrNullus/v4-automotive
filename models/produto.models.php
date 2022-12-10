@@ -1,10 +1,10 @@
 <?php
 
 require_utils(
-  array( 
+  [
     'replace_values',
     'prepare_query'
-  )
+  ]
 );
 
 
@@ -18,15 +18,48 @@ class Produto
 		$this->pdo = $pdo;
 	}
 	
-	/*
-		TODO:
-			- Adaptar método getProdutos para retornar todos os produtos cadastrados
-			- Atualizar a implementação da mesma em cada view
-	*/
+
+	public function getProduto( $id ) {
+
+		$stmt = "";
+		$produto = array();
+		$find_array = $id;
+
+		$stmt = "
+			SELECT
+				P.produto_id as id,
+				P.nome,
+				P.img,
+				C.nome as categoria,
+				P.unidade,
+				P.preco,
+				P.descricao,
+				P.obs
+
+			FROM
+				Produtos as P,
+				Categorias as C
+
+			WHERE 
+				P.produto_id = :id AND
+				P.categoria_id = C.categoria_id 
+		";
+
+		$stmt = prepare_query( $stmt, $find_array, $this->pdo );
+
+		if ($stmt->rowCount() > 0) {
+			$produto = $stmt->fetch(PDO::FETCH_ASSOC);
+		}
+
+		return $produto;
+
+	}
+
 	public function getProdutos() {
 
 		$stmt = "";
 		$produtos = array();
+		$find_array = $dados;
 
 		$stmt = "
 			SELECT

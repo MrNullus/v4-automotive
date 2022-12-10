@@ -6,7 +6,6 @@
 
 <?php  
 // # Importanto classes necessarias
-
 import_models(
   array( 'produto', 'categoria' )
 );
@@ -109,7 +108,10 @@ for ($i = 0; $i < $countQtdeCategorias; $i++):
       		-->
 
           <div class="product-btns">
-            <a href="../views/produto.php?p=<?php echo $produto['id']; ?>" class="btn btn-sale">
+            <a 
+              href="./views/produto.php?p=<?php echo $produto['id']; ?>" 
+              class="btn btn-sale"
+            >
               Comprar agora
             </a>
             <button class="btn btn-card">+</button>

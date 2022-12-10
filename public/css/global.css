@@ -35,7 +35,8 @@ p {
 }
 
 .btn:hover {
-	opacity: 0.69;
+	background-color: transparent!important;
+	color: var(--color-dark-500)!important;
 }
 
 .btn-dropdown {
@@ -100,6 +101,13 @@ p {
 	color: var(--color-dark-500);
 }
 
+.link-active:hover {
+	background-color: black!important;
+}
+
+.link-active:hover a {
+	color: white!important;
+}
 
 .link-media-socials i {
 	color: #222;

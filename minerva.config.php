@@ -9,6 +9,7 @@ $_VALIDACAO = new Validacao();
 
 require_utils(
 	array(
+		'useController',
 		'renderComponent',
 		'import_models',
 		'urls',
