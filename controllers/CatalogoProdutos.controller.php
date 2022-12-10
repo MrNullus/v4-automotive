@@ -6,7 +6,6 @@ import_models( array( 'produto' ) );
 
 class CatalogoProdutosController {
 	
-	
 	public function exibirPorCategoria( $categoria ) {
 		global $_PDO;
 		$produto = new Produto($_PDO);
@@ -15,8 +14,7 @@ class CatalogoProdutosController {
 		$produtos = $produto->getProdutosDaCategoria( 
 			$categoria, 'all'
 		);
-		
-		
+				
 		foreach($produtos as $produto) {
 			$conteudo += "
 		    <!-- single box -->
@@ -59,9 +57,8 @@ class CatalogoProdutosController {
 			";
 		}
 		
-		
-	)	/*return*/ print_r ($produtos;
-		echo "helooo world";
+	  print_r($produtos);
+		echo $conteudo;
 	}
 	
 }
