@@ -111,6 +111,29 @@ class Categoria
 
 	}
 
+	public function atualizar($dados) {
+		$status = null;
+
+		$stmt = "
+			UPDATE  
+				Categorias as C
+				SET 
+					C.nome = :nome
+				WHERE
+					C.id = :id
+		";
+
+		$stmt = prepare_query( $stmt, $dados, $this->pdo );
+
+		if ($stmt->rowCount() > 0) {
+			$status = true;
+		} else {
+			$status = false;
+		}
+
+		return $status;
+	}
+
 }
 
 ?>
