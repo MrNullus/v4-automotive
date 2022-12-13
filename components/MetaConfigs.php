@@ -8,20 +8,25 @@
 <meta name="keywords" content="">
 <meta name="copyright" content="">
 
-<link rel="icon" type="image/png" sizes="16x16"  href="/favicons/favicon-16x16.png">
+<!--===== Favicon =====-->
+<link
+  rel="icon"
+  type="image/png" sizes="16x16"
+  href="<?php echo assets('img/favicons', 'favicon-16x16.png'); ?>"
+/>
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 
 <!--===== Font Awesome 4.7.0 =====-->
-<link 
-  rel="stylesheet" 
-  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
-  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" c
-  rossorigin="anonymous" 
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+  crossorigin="anonymous"
 />
 
 <!--===== Bootstrap CSS =====-->
-<link 
-  href="<?php echo assets( 'bootstrap/css', 'bootstrap.min.css' ); ?>" 
-  rel="stylesheet" 
+<link
+  href="<?php echo assets( 'bootstrap/css', 'bootstrap.min.css' ); ?>"
+  rel="stylesheet"
 />

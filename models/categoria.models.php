@@ -1,11 +1,17 @@
 <?php  
 
+require_utils(
+  [
+    'replace_values',
+    'prepare_query'
+  ]
+);
+
 /**
 * 
 */
 class Categoria
 {
-	
 	private $pdo;
 	private $categorias = array();
 
@@ -79,6 +85,29 @@ class Categoria
 		}
 
 		return $this->categorias;
+
+	}
+
+	public function cadastrar($find_array) {
+		$status = null;
+
+		$stmt = "
+			INSERT INTO 
+				Categorias 
+					(nome)
+				VALUES
+					(:nome)
+		";
+
+		$stmt = prepare_query( $stmt, $find_array, $this->pdo );
+
+		if ($stmt->rowCount() > 0) {
+			$status = true;
+		} else {
+			$status = false;
+		}
+
+		return $status;
 
 	}
 

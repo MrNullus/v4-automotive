@@ -56,8 +56,30 @@ session_start();
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 list-link">
         <li class="nav-link btn link-active btn-outline"><a class="text-dark" href="<?php echo url_base(); ?>">Home</a></li>
-        <li class="nav-link"><a href="<?php echo url_base(); ?>/views/contact.php">Contato</a></li>
-        <li class="nav-link"><a href="<?php echo url_base(); ?>/views/aboutus.php">Sobre nos</a></li>
+
+        <?php if (isset( $_SESSION['adm'] ) && !empty( $_SESSION['adm'] )): ?>
+          <li class="nav-link">
+            <a href="<?php echo url_base(); ?>/views/cadastro_produto.php">
+              Cadastrar Produto
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="<?php echo url_base(); ?>/views/cadastro_categoria.php">
+              Cadastrar Categoria
+            </a>
+          </li>
+        <?php endif; ?>
+        
+        <li class="nav-link">
+            <a href="<?php echo url_base(); ?>/views/contact.php">
+              Contato
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="<?php echo url_base(); ?>/views/aboutus.php">
+              Sobre nos
+            </a>
+          </li>  
       </ul>
     </nav>
   </div>

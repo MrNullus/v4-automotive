@@ -22,11 +22,11 @@
 	gap: 2rem;
 	align-items: center;
 	justify-content: start;
-	height: 400px;
+	height: 420px;
 }
 
 .single-section-product .boxs .single-box {
-	width: 260px;
+	width: 360px;
 	max-width: 340px;
 	text-align: center;
 	box-shadow: 1px 1px 1px 1px #C5C5C5;
@@ -102,15 +102,19 @@
 	border-radius: 0;
 }
 
-.btn-sale {
+ .product-btns .btn-sale {
 	background: red!important;
 	flex-basis: 70%;
 	border-bottom-left-radius: 12px!important;
 	border-right: none!important;
 }
-.btn-card 
+.product-btns .btn-card 
 {
 	flex-basis: 30%;	
 	background: #5AEC5A!important;
 	border-bottom-right-radius: 12px!important;
+}
+.product-btns .btn:hover {
+	background-color: transparent!important;
+	color: var(--color-dark-500)!important;
 }

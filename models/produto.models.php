@@ -133,7 +133,7 @@ class Produto
 
 	}
 
-	public function cadastrar($dados) {
+	public function cadastrar($find_array) {
 
 		$stmt = "
 			INSERT INTO 
@@ -142,8 +142,6 @@ class Produto
 				VALUES
 					(:nome, :img, :categoria_id, :unidade, :preco, :descricao, :obs)
 		";
-
-		$find_array = $dados;
 
 		$stmt = prepare_query( $stmt, $find_array, $this->pdo );
 

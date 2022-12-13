@@ -61,8 +61,8 @@
 }
 
 .group-button, 
-input[type=submit],
-button {
+.group-button input[type=submit],
+.group-button button {
   min-width: 50%;
 }
 

@@ -42,19 +42,19 @@ require_once dirname(__DIR__). '\minerva.config.php';
     <div class="container-fluid page">
 
       <!-- header main -->
-      <?php renderComponent('Header'); ?>
+      <?php renderComponent( 'Header' ); ?>
       <!-- end of header main -->
 
       <main id="root">
 
         <!-- form produto -->
-        <?php renderComponent('FormProduto'); ?>
+        <?php renderComponent( 'FormCadastroProduto' ); ?>
         <!-- end of form produto -->  
         
       </main>
 
       <!-- footer -->
-      <?php renderComponent('Footer'); ?>
+      <?php renderComponent( 'Footer' ); ?>
       <!-- end of footer -->
 
     </div>
