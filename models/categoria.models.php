@@ -108,7 +108,6 @@ class Categoria
 		}
 
 		return $status;
-
 	}
 
 	public function atualizar($dados) {
@@ -117,10 +116,31 @@ class Categoria
 		$stmt = "
 			UPDATE  
 				Categorias as C
-				SET 
-					C.nome = :nome
-				WHERE
-					C.id = :id
+			SET 
+				C.nome = :nome
+			WHERE
+				C.id = :id
+		";
+
+		$stmt = prepare_query( $stmt, $dados, $this->pdo );
+
+		if ($stmt->rowCount() > 0) {
+			$status = true;
+		} else {
+			$status = false;
+		}
+
+		return $status;
+	}
+
+	public function deletar($dados) {
+		$status = null;
+
+		$stmt = "
+			DELETE FROM
+				Categorias as C
+			WHERE 
+				C.id = :id
 		";
 
 		$stmt = prepare_query( $stmt, $dados, $this->pdo );
