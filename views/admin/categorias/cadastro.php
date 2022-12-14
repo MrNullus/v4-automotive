@@ -1,5 +1,5 @@
 <?php  
-require_once dirname(__DIR__). '\minerva.config.php';
+require_once __DIR_ROOT__. '\minerva.config.php';
 ?>
 
 <html lang="pt-br">

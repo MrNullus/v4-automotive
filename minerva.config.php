@@ -1,5 +1,6 @@
 <?php
 
+define("__DIR_ROOT__", "C:\\xampp\htdocs\v4-automotive");
 $_PDO = new PDO("mysql:host=localhost;dbname=v4_automotive", "root", "");
 
 require('core/Validacao.php');
