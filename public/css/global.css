@@ -34,6 +34,16 @@ p {
 	width: 199px;
 }
 
+.input {
+	padding: 0.25rem 0.67rem;
+	border-radius: 0.23rem;
+	font-weight: 400;
+	color: ;
+}	
+.input::placeholder {
+	font-weight: 300;
+}
+
 .heading {
 	text-align: center;
 	letter-spacing: 1pt;
