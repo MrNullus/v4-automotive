@@ -1,5 +1,5 @@
 <?php  
-require_once __DIR_ROOT__. '\minerva.config.php';
+require_once 'C:\\xampp\\htdocs\\v4-automotive'. '\\minerva.config.php';
 ?>
 
 <html lang="pt-br">

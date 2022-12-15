@@ -16,12 +16,12 @@ if (Validacao::camposObrigatorios( $campos )) {
   $dados = [ ':nome' => $_POST['txtNome'] ];
 
 	if( !$categoria->cadastrar( $dados ) ) {
-    go_to( 'views/cadastro_categoria.php?status=error' );
+    go_to( 'views/admin/categoria/cadastro.php?status=error' );
   } 
 
-  go_to( 'views/cadastro_categoria.php?status=success' );
+  go_to( 'views/admin/categorias/cadastro.php?status=success' );
 } else {
-	go_to( 'views/cadastro_categoria.php?status=error' );
+	go_to( 'views/admin/categorias/cadastro.php?status=error' );
 }
 
 ?>
