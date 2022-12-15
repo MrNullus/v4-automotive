@@ -9,6 +9,11 @@ global $_PDO;
 
 $categoria = new Categoria($_PDO);
 $categorias = $categoria->getNomeCategorias();
+
+if (isset($_GET['search']) && !empty($_GET['search'])) {
+  $categoriaPesquisada = $_GET['search'];
+  $categorias = [$categoria->getNomeCategoria($categoriaPesquisada)];
+} 
 ?>
 
 <html lang="pt-br">
@@ -28,6 +33,10 @@ $categorias = $categoria->getNomeCategorias();
       rel="stylesheet"
       href="<?php echo assets( 'css', 'global.css' ); ?>"
     />
+    <link
+      rel="stylesheet"
+      href="<?php echo assets( 'css', 'categorias.css' ); ?>"
+    />
   </head>
 
   <body>
@@ -45,7 +54,7 @@ $categorias = $categoria->getNomeCategorias();
       </div>
 
       <main class="container categorie-box">
-        <header class="container d-flex header justify-content-between align-items-center mb-4">
+        <div class="container d-flex header justify-content-between align-items-center mb-4">
           <h2 class="subheading">Categorias</h2>
 
           <a
@@ -54,12 +63,37 @@ $categorias = $categoria->getNomeCategorias();
           >
             <i class="fa fa-plus" aria-hidden="true"></i>
           </a>
-        </header>
+        </div>
+
+        <form onsubmit="return false" class="container d-flex header box-search justify-content-between align-items-center mb-4">
+          <input 
+            type="search" 
+            name="search" 
+            class="input input-search" 
+            id="txtSearch" 
+            placeholder="Buscar por..."
+          />
+
+          <button
+            class="btn btn-primary btn-success btn-add btn-search"
+            onclick="
+              let categoriaPesquisada = document.querySelector('.input-search').value.toLowerCase();
+
+              if (categoriaPesquisada !== '') {
+                window.location.href = `<?php get_url_view('search_categoria'); ?>?search=${categoriaPesquisada}`;
+              }
+            "
+          >
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
 
         <div class="container mb-4">
           <ul class="nav col-md-auto mb-2 justify-content-center mb-md-0 list-links categorie-list">
             <?php foreach($categorias as $categoria): ?>
-            <li class="nav-link categorie-item">
+            <li 
+              class="nav-link categorie-item" 
+            >
               <a
                 href="../views/catalogo.php?c=<?php echo mb_strtolower($categoria['nome']); ?>">
                 <?php echo $categoria['nome']; ?>
@@ -69,7 +103,7 @@ $categorias = $categoria->getNomeCategorias();
                 <button
                   onclick="
                     if(confirm('Deseja excluir a categoria?')) {
-                      window.location.href = '<?php get_url_view('deletar_categoria'); ?>';
+                      window.location.href = '<?php get_url_view('deletar_categoria'); ?>?c=<?php echo $categoria['nome']; ?>';
                       console.log('<?php get_url_view('deletar_categoria'); ?>');
                     }
                   "
@@ -78,12 +112,15 @@ $categorias = $categoria->getNomeCategorias();
                   <i class="fa fa-times" aria-hidden="true"></i>
                 </button>
 
-                <a 
+                <button 
                   class="btn btn-primary-outline btn-edit"
-                  href="<?php get_url_view('edit_categoria'); ?>"
+                  onclick="
+                    window.location.href = '<?php get_url_view('edit_categoria'); ?>?c=<?php echo $categoria['nome']; ?>';
+                    console.log('<?php get_url_view('deletar_categoria'); ?>');
+                  " 
                 >
                   <i class="fa fa-pencil-square" aria-hidden="true"></i>
-                </a>
+                </button> 
               </div>
             </li>
             <?php endforeach; ?>
@@ -102,4 +139,3 @@ $categorias = $categoria->getNomeCategorias();
   </body>
 
 </html>
-                  "
