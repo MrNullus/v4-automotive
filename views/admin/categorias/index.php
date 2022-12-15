@@ -28,47 +28,6 @@ $categorias = $categoria->getNomeCategorias();
       rel="stylesheet"
       href="<?php echo assets( 'css', 'global.css' ); ?>"
     />
-    <style>
-      .categorie-list {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .categorie-box .header {
-        width: 100%;
-        padding: 2rem 0;
-      }
-
-      .list-links.categorie-list {
-          gap: 0rem!important;
-      }
-
-      .categorie-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .categorie-item > a {
-        font-size: 1.2rem!important;
-        font-weight: 600;
-        letter-spacing: 1pt;
-      }
-
-      .btn-add {
-        line-height: 30px;
-        width: 71px;
-        background: rgb(29,157,116);
-      }
-
-      .btn-actions .btn-remove:hover {
-        background: #dc3545!important;
-        color: #fff!important;
-      }
-      .btn-actions .btn-edit .fa-pencil-square {
-        font-size: 2.2rem!important;
-      }
-    </style>
   </head>
 
   <body>
