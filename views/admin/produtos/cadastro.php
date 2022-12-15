@@ -22,7 +22,7 @@ require_once dirname(__DIR__). '\minerva.config.php';
     />
     <link 
       rel="stylesheet" 
-      href="<?php echo assets( 'css', 'FormProduto.css' ); ?>" 
+      href="<?php echo assets( 'css', 'formCadastro.css' ); ?>" 
     />
 
     <!-- Scripts -->
