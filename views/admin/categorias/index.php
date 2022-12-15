@@ -9,10 +9,18 @@ global $_PDO;
 
 $categoria = new Categoria($_PDO);
 $categorias = $categoria->getNomeCategorias();
+$resultadoBusca = null;
 
 if (isset($_GET['search']) && !empty($_GET['search'])) {
-  $categoriaPesquisada = $_GET['search'];
-  $categorias = [$categoria->getNomeCategoria($categoriaPesquisada)];
+  $categoriaPesquisada = [ ':nome' => $_GET['search'] ];
+  $categoriaBuscada = $categoria->getNomeCategoria($categoriaPesquisada);
+  
+  if (count($categorias[0]) != 0) {
+    $categorias = $categoriaBuscada;  
+    $resultadoBusca = 200;
+  } else {
+    $resultadoBusca = 400;
+  }
 } 
 ?>
 
@@ -90,40 +98,50 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
 
         <div class="container mb-4">
           <ul class="nav col-md-auto mb-2 justify-content-center mb-md-0 list-links categorie-list">
-            <?php foreach($categorias as $categoria): ?>
-            <li 
-              class="nav-link categorie-item" 
-            >
-              <a
-                href="../views/catalogo.php?c=<?php echo mb_strtolower($categoria['nome']); ?>">
-                <?php echo $categoria['nome']; ?>
-              </a>
 
-              <div class="btn-actions">
-                <button
-                  onclick="
-                    if(confirm('Deseja excluir a categoria?')) {
-                      window.location.href = '<?php get_url_view('deletar_categoria'); ?>?c=<?php echo $categoria['nome']; ?>';
+            <?php if ($resultadoBusca == 200 || count($categorias) != 0): ?>
+              <?php foreach($categorias as $categoria): ?>
+              <li 
+                class="nav-link categorie-item" 
+                  data-key="<?php echo $categoria['categoria_id']; ?>"
+              >
+                <a
+                  href="../views/catalogo.php?c=<?php echo mb_strtolower($categoria['nome']); ?>">
+                  <?php echo $categoria['nome']; ?>
+                </a>
+
+                <div class="btn-actions">
+                  <button
+                    onclick="
+                      if(confirm('Deseja excluir a categoria?')) {
+                        window.location.href = '<?php get_url_view('deletar_categoria'); ?>?c=<?php echo $categoria['nome']; ?>';
+                        console.log('<?php get_url_view('deletar_categoria'); ?>');
+                      }
+                    "
+                    class="btn btn-danger btn-remove"
+                  >
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                  </button>
+
+                  <button 
+                    class="btn btn-primary-outline btn-edit"
+                    onclick="
+                      window.location.href = '<?php get_url_view('edit_categoria'); ?>?c=<?php echo $categoria['nome']; ?>';
                       console.log('<?php get_url_view('deletar_categoria'); ?>');
-                    }
-                  "
-                  class="btn btn-danger btn-remove"
-                >
-                  <i class="fa fa-times" aria-hidden="true"></i>
-                </button>
-
-                <button 
-                  class="btn btn-primary-outline btn-edit"
-                  onclick="
-                    window.location.href = '<?php get_url_view('edit_categoria'); ?>?c=<?php echo $categoria['nome']; ?>';
-                    console.log('<?php get_url_view('deletar_categoria'); ?>');
-                  " 
-                >
-                  <i class="fa fa-pencil-square" aria-hidden="true"></i>
-                </button> 
-              </div>
-            </li>
-            <?php endforeach; ?>
+                    " 
+                  >
+                    <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                  </button> 
+                </div>
+              </li>
+              <?php endforeach; ?>
+            <?php else: ?>
+              <li 
+                class="nav-link categorie-item" 
+              >
+                Sem nada...
+              </li>       
+            <?php endif ?>
           </ul>
         </div>
       </main>

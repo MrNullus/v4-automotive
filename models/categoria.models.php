@@ -14,6 +14,7 @@ class Categoria
 {
 	private $pdo;
 	private $categorias = array();
+	private $categoria = array();
 
 
 	public function __construct( $pdo ) {
@@ -47,12 +48,35 @@ class Categoria
 
 	}
 
+	public function getNomeCategoria($find_array) {
+
+		$stmt = "
+			SELECT
+				categoria_id, 
+				nome
+			FROM 
+				Categorias as C
+			WHERE 
+				nome = :nome
+		";
+
+		$stmt = prepare_query( $stmt, $find_array, $this->pdo );
+
+		if ($stmt->rowCount() > 0) {
+			$stmt = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$this->categoria = $stmt;
+		}
+
+		return $this->categoria;
+
+	}
 
 	public function getNomeCategorias() {
 
 		$stmt = "
 			SELECT 
-				nome 
+				categoria_id, 
+				nome
 			FROM 
 				Categorias 
 		";
