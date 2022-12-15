@@ -8,7 +8,7 @@
     <!-- content -->
     <div class="hero-content">
       <div class="title">
-        <h3>Sobre nós</h3>
+        <h3 style="color:#000;">Sobre nós</h3>
         <div class="underline"></div>
       </div>
 

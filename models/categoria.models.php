@@ -1,11 +1,17 @@
 <?php  
 
+require_utils(
+  [
+    'replace_values',
+    'prepare_query'
+  ]
+);
+
 /**
 * 
 */
 class Categoria
 {
-	
 	private $pdo;
 	private $categorias = array();
 
@@ -80,6 +86,72 @@ class Categoria
 
 		return $this->categorias;
 
+	}
+
+	public function cadastrar($find_array) {
+		$status = null;
+
+		$stmt = "
+			INSERT INTO 
+				Categorias 
+					(nome)
+				VALUES
+					(:nome)
+		";
+
+		$stmt = prepare_query( $stmt, $find_array, $this->pdo );
+
+		if ($stmt->rowCount() > 0) {
+			$status = true;
+		} else {
+			$status = false;
+		}
+
+		return $status;
+	}
+
+	public function atualizar($dados) {
+		$status = null;
+
+		$stmt = "
+			UPDATE  
+				Categorias as C
+			SET 
+				C.nome = :nome
+			WHERE
+				C.id = :id
+		";
+
+		$stmt = prepare_query( $stmt, $dados, $this->pdo );
+
+		if ($stmt->rowCount() > 0) {
+			$status = true;
+		} else {
+			$status = false;
+		}
+
+		return $status;
+	}
+
+	public function deletar($dados) {
+		$status = null;
+
+		$stmt = "
+			DELETE FROM
+				Categorias as C
+			WHERE 
+				C.id = :id
+		";
+
+		$stmt = prepare_query( $stmt, $dados, $this->pdo );
+
+		if ($stmt->rowCount() > 0) {
+			$status = true;
+		} else {
+			$status = false;
+		}
+
+		return $status;
 	}
 
 }

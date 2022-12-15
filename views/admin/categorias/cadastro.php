@@ -1,5 +1,5 @@
 <?php  
-require_once '../minerva.config.php';
+require_once 'C:\\xampp\\htdocs\\v4-automotive'. '\\minerva.config.php';
 ?>
 
 <html lang="pt-br">
@@ -8,8 +8,8 @@ require_once '../minerva.config.php';
     <?php renderComponent( 'MetaConfigs' ); ?>
 
     <!--===== Title of Site =====-->
-    <title>V4 Automotive</title>
-    
+    <title>V4 Automotive</title>    
+
     <!--===== Links File CSS  =====-->
     <link 
       rel="stylesheet" 
@@ -19,6 +19,20 @@ require_once '../minerva.config.php';
       rel="stylesheet" 
       href="<?php echo assets( 'css', 'global.css' ); ?>" 
     />
+    <link 
+      rel="stylesheet" 
+      href="<?php echo assets( 'css', 'formCadastro.css' ); ?>" 
+    />
+
+    <!-- Scripts -->
+    <script 
+      src="<?php echo assets( 'js', 'validacoes.js' ); ?>">
+    </script>
+
+    <!-- Linkando a biblioteca Sweet -->
+    <script 
+      src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+    </script>
   </head>
 
   <body>
@@ -30,15 +44,13 @@ require_once '../minerva.config.php';
       <?php renderComponent('Header'); ?>
       <!-- end of header main -->
 
-      <div class="banner-container">
-        <div class="banner-content" id="banner-main">
-        </div>
-      </div>
+     	<main id="root">
+     		<h3 class="subheading">Cadastrar Produto</h3>
 
-      <main class="container">
-        
-
-
+     		<br>
+        <!-- form produto -->
+        <?php renderComponent('FormCadastroCategoria'); ?>
+        <!-- end of form produto -->  
       </main>
 
       <!-- footer -->
@@ -51,4 +63,4 @@ require_once '../minerva.config.php';
     <?php renderComponent( 'ScriptComponent' ); ?>
   </body>
 
-</html>'
+</html>
