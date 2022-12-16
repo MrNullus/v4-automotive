@@ -8,6 +8,41 @@
   padding: 2rem 0;
 }
 
+.box-search {
+ padding: 0!important; 
+}
+
+.box-search a {
+  background: #fff;
+  color: black;
+  border-color: black;
+}
+.box-search a:hover {
+  background: black!important; 
+  color: #fff!important;
+}
+
+.box-search a i {
+  line-height: 1.5rem;
+}
+
+.input-search {
+  width: 94%;
+  border: 1px solid black;
+  margin: 0.45rem;
+}
+
+.btn-search {
+  height: 36px;
+  background-color: #fff!important;
+  color: #000!important;
+  border-color: black;
+}
+.btn-search:hover {
+  background: #000!important;
+  color: #fff!important;
+}
+
 .list-links.categorie-list {
     gap: 0rem!important;
 }

@@ -27,7 +27,7 @@ if ( isset($_GET['status']) && !empty($_GET['status']) ) {
 
 <form 
   class="container form-produto" 
-  action="<?php echo url_controllers('FormCadastroProduto'); ?>" 
+  action="<?php echo url_controllers('CadastroProduto'); ?>" 
   onsubmit="return validarForm()" 
   method="POST"
 >
