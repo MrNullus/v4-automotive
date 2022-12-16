@@ -52,6 +52,22 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
     <!-- page -->
     <div class="container-fluid page">
 
+      <?php if (isset($_GET['op']) || !empty($_GET['op'])): ?>
+        <?php if ($_GET['op'] == 'true'): ?>
+          <script>
+            setTimeout(() => {
+              alert('Operação feita com êxito!');
+            }, 1000);
+          </script>   
+        <?php else: ?>
+          <script>
+            setTimeout(() => {
+              alert('Ops, a operação falhou...');
+            }, 1000);
+          </script>   
+        <?php endif ?>
+      <?php endif ?>
+
       <!-- header main -->
       <?php renderComponent('Header'); ?>
       <!-- end of header main -->
@@ -73,7 +89,7 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
           </a>
         </div>
 
-        <form onsubmit="return false" class="container d-flex header box-search justify-content-between align-items-center mb-4">
+        <form method="GET" onsubmit="return false" class="container d-flex header box-search justify-content-between align-items-center mb-4">
           <input 
             type="search" 
             name="search" 
@@ -111,23 +127,23 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
                 </a>
 
                 <div class="btn-actions">
-                  <button
+                  <!-- <button
                     onclick="
                       if(confirm('Deseja excluir a categoria?')) {
-                        window.location.href = '<?php get_url_view('deletar_categoria'); ?>?c=<?php echo $categoria['nome']; ?>';
-                        console.log('<?php get_url_view('deletar_categoria'); ?>');
+                        window.location.href = '<?php get_url_view('deletar_categoria'); ?>?id=<?php echo $categoria['categoria_id']; ?>';
                       }
                     "
                     class="btn btn-danger btn-remove"
                   >
                     <i class="fa fa-times" aria-hidden="true"></i>
-                  </button>
+                  </button> -->
 
                   <button 
                     class="btn btn-primary-outline btn-edit"
                     onclick="
-                      window.location.href = '<?php get_url_view('edit_categoria'); ?>?c=<?php echo $categoria['nome']; ?>';
-                      console.log('<?php get_url_view('deletar_categoria'); ?>');
+                      window.location.href = `
+                      <?php echo get_url_view('edit_categoria').'?c='.$categoria['nome'].'&id='.$categoria['categoria_id']; ?>
+                      `;
                     " 
                   >
                     <i class="fa fa-pencil-square" aria-hidden="true"></i>
