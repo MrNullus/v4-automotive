@@ -22,7 +22,7 @@ class Categoria
 	}
 
 
-	public function categoriaExiste( $categoria ) {
+	public static function categoriaExiste( $categoria ) {
 
 		$stmt = "
 			SELECT 
@@ -48,7 +48,7 @@ class Categoria
 
 	}
 
-	public function getNomeCategoria($find_array) {
+	public static function getNomeCategoria($find_array) {
 
 		$stmt = "
 			SELECT
@@ -71,7 +71,7 @@ class Categoria
 
 	}
 
-	public function getNomeCategorias() {
+	public static function getNomeCategorias() {
 
 		$stmt = "
 			SELECT 
@@ -92,7 +92,7 @@ class Categoria
 
 	}
 
-	public function getCategorias() {
+	public static function getCategorias() {
 
 		$stmt = "
 			SELECT 
@@ -112,7 +112,7 @@ class Categoria
 
 	}
 
-	public function cadastrar($find_array) {
+	public static function cadastrar($find_array) {
 		$status = null;
 
 		$stmt = "
@@ -134,7 +134,7 @@ class Categoria
 		return $status;
 	}
 
-	public function atualizar($dados) {
+	public static function atualizar($dados) {
 		$status = null;
 
 		$stmt = "
@@ -157,7 +157,7 @@ class Categoria
 		return $status;
 	}
 
-	public function deletar($dados) {
+	public static function deletar($dados) {
 		$status = null;
 
 		$stmt = "
