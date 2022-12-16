@@ -1,3 +1,7 @@
+<?php  
+global $id, $nome;
+?>
+
 <form 
   class="container form-produto" 
   action="<?php echo url_controllers('AtualizarCategoria'); ?>" 
