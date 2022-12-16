@@ -28,7 +28,20 @@ if ( isset($_GET['status']) && !empty($_GET['status']) ) {
 <form 
   class="container form-produto" 
   action="<?php echo url_controllers('CadastroCategoria'); ?>" 
-  onsubmit="return validarForm()" 
+  onsubmit="
+    valueTxtNome = document.getElementById('txtNome').value;
+
+    if (valueTxtNome == '') {
+      swal(
+          'Ops!', 
+          'O campo nome é obrigatório!', 
+          'error'
+      );
+      return false;
+    } 
+
+    return true;
+  " 
   method="POST"
 >
 	<div class="heading">
@@ -55,16 +68,8 @@ if ( isset($_GET['status']) && !empty($_GET['status']) ) {
 
   <div class="row">
     <div>
-      <label for="txtNome" class="form-label">
-      	Nome
-      </label>
-      <input 
-      	type="text" 
-      	class="form-control" 
-      	id="txtNome" 
-      	name="txtNome" 
-      	aria-describedby="txtNome" 
-      />
+      <label for="txtNome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="txtNome" name="txtNome" aria-describedby="txtNome" />
     </div>
 
     <div class="group-button mt-4">
@@ -72,6 +77,7 @@ if ( isset($_GET['status']) && !empty($_GET['status']) ) {
 	    	type="submit" 
 	    	value="Cadastrar" 
 	    	class="btn btn-cadastar" 
+        onclick="validarForm()"
 	    />
 
 	    <button type="reset" class="btn btn-limpar">

@@ -25,9 +25,6 @@ require_once 'C:\\xampp\\htdocs\\v4-automotive'. '\\minerva.config.php';
     />
 
     <!-- Scripts -->
-    <script 
-      src="<?php echo assets( 'js', 'validacoes.js' ); ?>">
-    </script>
 
     <!-- Linkando a biblioteca Sweet -->
     <script 
@@ -45,7 +42,7 @@ require_once 'C:\\xampp\\htdocs\\v4-automotive'. '\\minerva.config.php';
       <!-- end of header main -->
 
      	<main id="root">
-     		<h3 class="subheading">Cadastrar Produto</h3>
+     		<h3 class="subheading">Cadastrar Categoria</h3>
 
      		<br>
         <!-- form produto -->
