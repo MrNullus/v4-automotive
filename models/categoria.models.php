@@ -22,7 +22,7 @@ class Categoria
 	}
 
 
-	public static function categoriaExiste( $categoria ) {
+	public function categoriaExiste( $categoria ) {
 
 		$stmt = "
 			SELECT 
@@ -48,7 +48,7 @@ class Categoria
 
 	}
 
-	public static function getNomeCategoria($find_array) {
+	public function getNomeCategoria($find_array) {
 
 		$stmt = "
 			SELECT
@@ -71,7 +71,7 @@ class Categoria
 
 	}
 
-	public static function getNomeCategorias() {
+	public function getNomeCategorias() {
 
 		$stmt = "
 			SELECT 
@@ -92,7 +92,7 @@ class Categoria
 
 	}
 
-	public static function getCategorias() {
+	public function getCategorias() {
 
 		$stmt = "
 			SELECT 
@@ -112,7 +112,7 @@ class Categoria
 
 	}
 
-	public static function cadastrar($find_array) {
+	public function cadastrar($find_array) {
 		$status = null;
 
 		$stmt = "
@@ -134,7 +134,7 @@ class Categoria
 		return $status;
 	}
 
-	public static function atualizar($dados) {
+	public function atualizar($dados) {
 		$status = null;
 
 		$stmt = "
@@ -143,7 +143,7 @@ class Categoria
 			SET 
 				C.nome = :nome
 			WHERE
-				C.id = :id
+				C.categoria_id = :id
 		";
 
 		$stmt = prepare_query( $stmt, $dados, $this->pdo );
@@ -157,15 +157,10 @@ class Categoria
 		return $status;
 	}
 
-	public static function deletar($dados) {
+	public function deletar($dados) {
 		$status = null;
 
-		$stmt = "
-			DELETE FROM
-				Categorias as C
-			WHERE 
-				C.id = :id
-		";
+		$stmt = "DELETE FROM categorias WHERE categoria_id = :id";
 
 		$stmt = prepare_query( $stmt, $dados, $this->pdo );
 
