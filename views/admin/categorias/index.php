@@ -1,5 +1,6 @@
 <?php
-require_once 'C:\\xampp\\htdocs\\v4-automotive'. '\\minerva.config.php';
+require_once 'C:\\xampp\\htdocs\\v4-automotive\\minerva.config.php';
+
 import_models(
   array( 'categoria' )
 );
@@ -33,18 +34,7 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
     <title>V4 Automotive</title>
 
     <!--===== Links File CSS  =====-->
-    <link
-      rel="stylesheet"
-      href="<?php echo assets( 'css', 'reset.css' ); ?>"
-    />
-    <link
-      rel="stylesheet"
-      href="<?php echo assets( 'css', 'global.css' ); ?>"
-    />
-    <link
-      rel="stylesheet"
-      href="<?php echo assets( 'css', 'categorias.css' ); ?>"
-    />
+    <?php extends_styles([ 'categorias' ]); ?>
   </head>
 
   <body>
@@ -83,7 +73,7 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
 
           <a
             class="btn btn-primary btn-success btn-add"
-            href="<?php echo get_url_view('cadastro_categoria'); ?>"
+            href="<?php get_url_view('app.admin.categoria_cadastro'); ?>"
           >
             <i class="fa fa-plus" aria-hidden="true"></i>
           </a>
@@ -104,7 +94,7 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
               let categoriaPesquisada = document.querySelector('.input-search').value.toLowerCase();
 
               if (categoriaPesquisada !== '') {
-                window.location.href = `<?php get_url_view('search_categoria'); ?>?search=${categoriaPesquisada}`;
+                window.location.href = `<?php get_url_view('app.admin.categoria'); ?>?search=${categoriaPesquisada}`;
               }
             "
           >
@@ -127,23 +117,25 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
                 </a>
 
                 <div class="btn-actions">
-                  <!-- <button
+                  <button
                     onclick="
                       if(confirm('Deseja excluir a categoria?')) {
-                        window.location.href = '<?php get_url_view('deletar_categoria'); ?>?id=<?php echo $categoria['categoria_id']; ?>';
+                        window.location.href = '<?php 
+                          get_url_view('app.admin.categoria_deletar').'?id='.$categoria['categoria_id']; 
+                        ?>';
                       }
                     "
                     class="btn btn-danger btn-remove"
                   >
                     <i class="fa fa-times" aria-hidden="true"></i>
-                  </button> -->
+                  </button>
 
                   <button 
                     class="btn btn-primary-outline btn-edit"
                     onclick="
-                      window.location.href = `
-                      <?php echo get_url_view('edit_categoria').'?c='.$categoria['nome'].'&id='.$categoria['categoria_id']; ?>
-                      `;
+                      window.location.href = `<?php 
+                        get_url_view('app.admin.categoria_edit').'?c='.$categoria['nome'].'&id='.$categoria['categoria_id']; 
+                      ?>`;
                     " 
                   >
                     <i class="fa fa-pencil-square" aria-hidden="true"></i>

@@ -1,6 +1,6 @@
 <?php  
 
-require_once( dirname( __DIR__ ).'/minerva.config.php' );
+require_once 'C:\\xampp\\htdocs\\v4-automotive\\minerva.config.php';
 session_start();
 
 $campos = array(
@@ -38,12 +38,12 @@ if (Validacao::camposObrigatorios( $campos )) {
   }
 
   if( !$produto->cadastrar( $dados ) ) {
-    go_to( 'views/cadastro_produto.php?status=error' );
+    go_to( '/views/admin/produtos/cadastro.php?status=error' );
   } 
 
-  go_to( 'views/cadastro_produto.php?status=success' );
+  go_to( '/views/admin/produtos/cadastro.php?status=success' );
 } else {
-  go_to( 'views/cadastro_produto.php?status=error' );
+  go_to( '/views/admin/produtos/cadastro.php?status=error' );
 }
 
 ?>

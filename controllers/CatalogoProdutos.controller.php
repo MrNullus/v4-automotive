@@ -1,6 +1,6 @@
 <?php
 
-require_once( dirname( __DIR__ ).'/minerva.config.php' );
+require_once 'C:\\xampp\\htdocs\\v4-automotive\\minerva.config.php';
 import_models( array( 'produto' ) );
 
 

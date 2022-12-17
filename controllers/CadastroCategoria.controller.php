@@ -1,6 +1,6 @@
 <?php 	 
 
-require_once( dirname( __DIR__ ).'/minerva.config.php' );
+require_once 'C:\\xampp\\htdocs\\v4-automotive\\minerva.config.php';
 session_start();
 
 $campos = [ $_POST['txtNome'] ];
@@ -16,12 +16,12 @@ if (Validacao::camposObrigatorios( $campos )) {
   $dados = [ ':nome' => $_POST['txtNome'] ];
 
 	if( !$categoria->cadastrar( $dados ) ) {
-    go_to( 'views/admin/categoria/cadastro.php?status=error' );
+    go_to( '/views/admin/categorias/cadastro.php?status=error' );
   } 
 
-  go_to( 'views/admin/categorias/cadastro.php?status=success' );
+  go_to( '/views/admin/categorias/cadastro.php?status=success' );
 } else {
-	go_to( 'views/admin/categorias/cadastro.php?status=error' );
+	go_to( '/views/admin/categorias/cadastro.php?status=error' );
 }
 
 ?>

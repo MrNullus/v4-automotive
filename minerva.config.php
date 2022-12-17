@@ -12,6 +12,7 @@ require_utils(
 	array(
 		'useController',
 		'renderComponent',
+		'extends_styles',
 		'import_models',
 		'urls',
 		'assets',

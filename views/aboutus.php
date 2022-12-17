@@ -1,5 +1,5 @@
 <?php  
-require_once '../minerva.config.php';
+require_once 'C:\\xampp\\htdocs\\v4-automotive'. '\\minerva.config.php';
 ?>
 
 <html lang="pt-br">
@@ -11,14 +11,7 @@ require_once '../minerva.config.php';
     <title>V4 Automotive || Sobre nos</title>
 
     <!--===== Links File CSS  =====-->
-    <link 
-      rel="stylesheet" 
-      href="<?php echo assets( 'css', 'reset.css' ); ?>" 
-    />
-    <link 
-      rel="stylesheet" 
-      href="<?php echo assets( 'css', 'global.css' ); ?>" 
-    />
+    <?php extends_styles([ 'sobrenos' ]); ?>
   </head>
 
   <body>

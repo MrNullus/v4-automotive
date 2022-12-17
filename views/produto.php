@@ -1,9 +1,9 @@
 <?php  
-require_once dirname(__DIR__). '\minerva.config.php';
+require_once 'C:\\xampp\\htdocs\\v4-automotive'. '\\minerva.config.php';
 
 // Verificar se houve alguma requisição
-if (!isset($_GET['p']) && empty($_GET['p'])) {
-  go_to('index.php');
+if (!isset($_GET['p']) || empty($_GET['p'])) {
+  go_to('');
 }
 
 // # Importanto classes necessarias
@@ -29,18 +29,7 @@ $produto = $produto->getProduto([':id' => $id]);
     <title>V4 Automotive</title>
 
     <!--===== Links File CSS  =====-->
-    <link 
-      rel="stylesheet" 
-      href="<?php echo assets( 'css', 'reset.css' ); ?>" 
-    />
-    <link 
-      rel="stylesheet" 
-      href="<?php echo assets( 'css', 'global.css' ); ?>" 
-    />
-    <link 
-      rel="stylesheet" 
-      href="<?php echo assets( 'css', 'singleProduto.css' ); ?>" 
-    />
+    <?php extends_styles([ 'singleProduto' ]); ?>
   </head>
 
   <body>
@@ -58,7 +47,10 @@ $produto = $produto->getProduto([':id' => $id]);
         	<section class="single-row">
         		<div class="column brand-product">
               <div 
-                style="background-image: url(<?php echo assets( 'img/produtos', $produto['img']); ?>)" 
+                style="
+                background-image: 
+                  url(<?php echo assets( 'img/produtos', $produto['img']); ?>)
+                " 
                 class="img"
               >
               </div>
