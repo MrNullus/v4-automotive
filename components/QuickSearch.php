@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?php echo assets( 'css', 'quickSearch.css' ); ?>">
+<?php extends_styles([ 'quickSearch' ]); ?>
 
 <aside class="box-quick-search">
 

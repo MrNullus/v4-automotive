@@ -13,7 +13,7 @@ session_start();
 
     <!-- single row -->
     <div class="nav col-12 col-md-auto mb-3 justify-content-between mb-md-0 row-top">
-      <a href="./">
+      <a href="<?php echo url_base(); ?>">
         <img 
           class="image rounded-3 logo-header logo-header"
           src="<?php echo assets('img/logo', 'v4automotive.png'); ?>" 
@@ -59,27 +59,27 @@ session_start();
 
         <?php if (isset( $_SESSION['adm'] ) && !empty( $_SESSION['adm'] )): ?>
           <li class="nav-link">
-            <a href="<?php echo url_base(); ?>/views/cadastro_produto.php">
+            <a href="<?php get_url_view('app.admin.produto_cadastro') ?>">
               Cadastrar Produto
             </a>
           </li>
           <li class="nav-link">
-            <a href="<?php echo url_base(); ?>/views/cadastro_categoria.php">
+            <a href="<?php get_url_view('app.admin.categoria_cadastro') ?>">
               Cadastrar Categoria
             </a>
           </li>
         <?php endif; ?>
         
         <li class="nav-link">
-            <a href="<?php echo url_base(); ?>/views/contact.php">
+            <a href="<?php get_url_view('app.commons.contact') ?>">
               Contato
             </a>
           </li>
           <li class="nav-link">
-            <a href="<?php echo url_base(); ?>/views/aboutus.php">
+            <a href="<?php get_url_view('app.commons.aboutus'); ?>">
               Sobre nos
             </a>
-          </li>  
+          </li>
       </ul>
     </nav>
   </div>

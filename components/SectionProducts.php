@@ -1,15 +1,11 @@
-<link 
-  rel="stylesheet" 
-  href="<?php echo assets( 'css', 'sectionProducts.css' ); ?>" 
-/>
-
-
 <?php  
+// # Extendendo Estilos
+extends_styles([ 'sectionProducts' ]);
+
 // # Importanto classes necessarias
 import_models(
   array( 'produto', 'categoria' )
 );
-
 
 // # Dados Iniciais
 global $_PDO;
