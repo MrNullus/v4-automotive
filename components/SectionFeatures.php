@@ -1,6 +1,7 @@
-<link rel="stylesheet" href="<?php echo assets( 'css', 'sectionFeatures.css' ); ?>" />
-
 <?php  
+// # Extendendo Estilos
+extends_styles([ 'sectionFeatures' ]);
+
 // # Data Initial
 $data = [
   [

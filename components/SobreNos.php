@@ -1,6 +1,3 @@
-<link rel="stylesheet" href="<?php echo assets( 'css', 'sobrenos.css' ); ?>" />
-
-
 <!-- sobre nos container -->
 <div class="hero-container">
   <!-- hero -->

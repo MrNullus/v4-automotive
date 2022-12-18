@@ -10,19 +10,47 @@ function url_controllers( $file ) {
 }
 
 function get_url_view($alias) {
-  $path_view = '';
+  $path_view = url_base().'/views';
 
   switch ($alias) {
-    case 'cadastro_categoria':
-      $path_view = url_base(). '/views/admin/categorias/cadastro.php';
+    /*  
+    * Views COMMONS
+    */ 
+    case 'app.commons.contact':
+      $path_view .= '/contact.php';
       break;
 
-    case 'edit_categoria':
-      $path_view = url_base(). '/views/admin/categorias/edit.php';
+    case 'app.commons.aboutus':
+      $path_view .= '/aboutus.php';
       break;
 
-    case 'deletar_categoria':
-      $path_view = url_base(). '/views/admin/categorias/deletar.php';
+    /*  
+    * Views ADMINS
+    */ 
+    
+    case 'app.admin.categoria':
+      $path_view .= '/admin/categorias/';
+      break;
+
+    case 'app.admin.categoria_cadastro':
+      $path_view .= '/admin/categorias/cadastro.php';
+      break;
+
+    case 'app.admin.categoria_edit':
+      $path_view .= '/admin/categorias/edit.php';
+      break;
+
+    case 'app.admin.categoria_deletar':
+      $path_view .= '/admin/categorias/deletar.php';
+      break;
+
+
+    case 'app.admin.produto':
+      $path_view .= '/admin/produtos/';
+      break;
+
+    case 'app.admin.produto_cadastro':
+      $path_view .= '/admin/produtos/cadastro.php';
       break;
 
     default:

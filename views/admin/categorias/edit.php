@@ -1,7 +1,10 @@
 <?php
-require_once 'C:\\xampp\\htdocs\\v4-automotive'. '\\minerva.config.php';
+require_once 'C:\\xampp\\htdocs\\v4-automotive\\minerva.config.php';
 
-if ((!isset($_GET['c']) || !isset($_GET['id'])) || (empty($_GET['c']) || empty($_GET['id']))) {
+if (
+  ( !isset($_GET['c']) || !isset($_GET['id']) ) || 
+  ( empty($_GET['c'])  || empty($_GET['id'])  )
+) {
 	go_to('views/admin/categorias/');
 }
 
@@ -18,20 +21,7 @@ $nome = $_GET['c'];
     <title>V4 Automotive</title>    
 
     <!--===== Links File CSS  =====-->
-    <link 
-      rel="stylesheet" 
-      href="<?php echo assets( 'css', 'reset.css' ); ?>" 
-    />
-    <link 
-      rel="stylesheet" 
-      href="<?php echo assets( 'css', 'global.css' ); ?>" 
-    />
-    <link 
-      rel="stylesheet" 
-      href="<?php echo assets( 'css', 'formCadastro.css' ); ?>" 
-    />
-
-    <!-- Scripts -->
+    <?php extends_styles([ 'formCadastro' ]); ?>
 
     <!-- Linkando a biblioteca Sweet -->
     <script 

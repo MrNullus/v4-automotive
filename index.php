@@ -11,14 +11,6 @@ require_once 'minerva.config.php';
     <title>V4 Automotive</title>    
 
     <!--===== Links File CSS  =====-->
-    <link 
-      rel="stylesheet" 
-      href="<?php echo assets( 'css', 'reset.css' ); ?>" 
-    />
-    <link 
-      rel="stylesheet" 
-      href="<?php echo assets( 'css', 'global.css' ); ?>" 
-    />
   </head>
 
   <body>

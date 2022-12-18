@@ -1,7 +1,7 @@
 <?php  
 
 session_start();
-require_once( dirname( __DIR__ ).'/minerva.config.php' );
+require_once 'C:\\xampp\\htdocs\\v4-automotive\\minerva.config.php';
 
 $campos = [ $_POST['txtNome'], $_GET['id'] ];
 
@@ -19,12 +19,12 @@ if (Validacao::camposObrigatorios( $campos )) {
   ];
 
 	if( !$categoria->atualizar( $dados ) ) {
-    go_to( 'views/edit_categoria.php?status=error' );
+    go_to( '/views/admin/categorias/edit.php?status=error' );
   } 
 
-  go_to( 'views/edit_categoria.php?status=success' );
+  go_to( '/views/admin/categorias/edit.php?status=success' );
 } else {
-	go_to( 'views/edit_categoria.php?status=error' );
+	go_to( '/views/admin/categorias/edit.php?status=error' );
 }
 
 ?>

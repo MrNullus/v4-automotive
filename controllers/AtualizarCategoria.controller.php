@@ -15,9 +15,9 @@ import_models(
 
 $categoria = new Categoria($_PDO);
 if ($categoria->atualizar([ ':nome' => $nome, ':id' => $id ])) {
-	go_to('views/admin/categorias/?op=true');
+	go_to('/views/admin/categorias/?op=true');
 } else {
-	go_to('views/admin/categorias/?op=false');
+	go_to('/views/admin/categorias/?op=false');
 }
 
 ?>

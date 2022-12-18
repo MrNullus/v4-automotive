@@ -30,3 +30,13 @@
   href="<?php echo assets( 'bootstrap/css', 'bootstrap.min.css' ); ?>"
   rel="stylesheet"
 />
+
+<!--===== Links File CSS  =====-->
+<link
+  rel="stylesheet"
+  href="<?php echo assets( 'css', 'reset.css' ); ?>"
+/>
+<link
+  rel="stylesheet"
+  href="<?php echo assets( 'css', 'global.css' ); ?>"
+/>

@@ -46,20 +46,24 @@ global $id, $nome;
 
   <div class="row">
     <div>
-      <label for="txtID" class="form-label"># ID</label>
+      <label for="txtID" class="sr-only form-label" aria-hidden="true">
+        # ID
+      </label>
       <input 
-        type="text" 
-        disabled
+        type="hidden" 
         class="form-control" 
         id="txtID" 
         name="txtID" 
         aria-describedby="txtID" 
+        aria-hidden="true"
         value="<?php echo $id; ?>"
       />
     </div>
 
     <div>
-      <label for="txtNome" class="form-label">Nome</label>
+      <label for="txtNome" class="form-label">
+        Nome
+      </label>
       <input 
         type="text" 
         class="form-control" 
@@ -73,7 +77,7 @@ global $id, $nome;
     <div class="group-button mt-4">
       <input 
         type="submit" 
-        value="Cadastrar" 
+        value="Atualizar" 
         class="btn btn-cadastar" 
         onclick="validarForm()"
       />
