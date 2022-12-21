@@ -105,7 +105,7 @@ class Produto
 			SELECT
 				P.produto_id as id,
 				P.nome,
-				P.img,
+				P.img as img,
 				C.nome as categoria,
 				P.unidade,
 				P.preco,
