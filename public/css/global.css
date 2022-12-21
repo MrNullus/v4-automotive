@@ -29,6 +29,10 @@ p {
 	display: none!important;
 }
 
+.text-center {
+	text-align: center!important;
+}
+
 .logo-header,
 .logo-footer {
 	width: 199px;
@@ -150,4 +154,28 @@ p {
 	transform: scale(1.6);
 	cursor: pointer;
 	color: var(--color-primary);
+}
+
+.section-contact {
+	margin-top: 3rem;
+}
+
+.list-media {
+	flex: 1;
+	align-items: center; 
+	justify-content: center;
+	gap: 2rem;
+}
+
+.list-media .list-item a {
+	font-size: 1.1rem!important;
+	padding: 0.65rem;
+	border: 2px solid #000;
+	border-radius: 5px;
+}
+
+.list-media .list-item a:hover {
+	transition: 0.45s;
+	background: #000;
+	color: #fff;
 }
