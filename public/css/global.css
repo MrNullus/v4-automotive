@@ -29,6 +29,10 @@ p {
 	display: none!important;
 }
 
+.text-center {
+	text-align: center!important;
+}
+
 .logo-header,
 .logo-footer {
 	width: 199px;
@@ -45,11 +49,11 @@ p {
 }
 
 .heading {
-	text-align: center;
+	text-align: left;
 	letter-spacing: 1pt;
-	font-size: 2.7rem!important;
+	font-size: 2.6rem!important;
 	font-family: 'Medula One', cursive;
-	font-weight: 600!important;
+	font-weight: 500!important;
 	color: #000;
 }
 
@@ -81,9 +85,6 @@ p {
 	color: var(--color-primary);
 }
 
-.section-header .heading {
-	font-size: 1.6rem!important;
-}
 
 /**********
 	Page
@@ -153,4 +154,28 @@ p {
 	transform: scale(1.6);
 	cursor: pointer;
 	color: var(--color-primary);
+}
+
+.section-contact {
+	margin-top: 3rem;
+}
+
+.list-media {
+	flex: 1;
+	align-items: center; 
+	justify-content: center;
+	gap: 2rem;
+}
+
+.list-media .list-item a {
+	font-size: 1.1rem!important;
+	padding: 0.65rem;
+	border: 2px solid #000;
+	border-radius: 5px;
+}
+
+.list-media .list-item a:hover {
+	transition: 0.45s;
+	background: #000;
+	color: #fff;
 }

@@ -23,7 +23,7 @@ $categorias = $categoria->getNomeCategorias();
         <?php foreach($categorias as $categoria): ?>
         <li class="nav-link">
           <a 
-            href="../views/catalogo.php?c=<?php echo mb_strtolower($categoria['nome']); ?>">
+            href="<?php echo url_base(); ?>/views/catalogo.php?c=<?php echo mb_strtolower($categoria['nome']); ?>">
             <?php echo $categoria['nome']; ?>  
           </a>
         </li>  

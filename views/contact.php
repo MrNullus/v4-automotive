@@ -30,7 +30,20 @@ require_once 'C:\\xampp\\htdocs\\v4-automotive'. '\\minerva.config.php';
 
       <main class="container">
 
+        <h2 class="heading text-center">Entre em contato conosco!</h2>
 
+        <section class="container section-contact">
+          <nav class="nav">
+            <ul class="list-media d-flex">
+              <li class="list-item">
+                <a href="#">Facebook</a>
+              </li>
+              <li class="list-item">
+                <a href="#">Instagram</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
 
       </main>
 

@@ -25,6 +25,12 @@ class CatalogoProdutosController {
 						{$produto['nome']}
 				  </h5>
 
+				  <div 
+            style='background-image: url(".assets( 'img/produtos', $produto['img']).")'
+            class='img'
+          >
+          </div>
+
 				  <span class='price'>
 						{$produto['preco']}
 				  </span>
@@ -48,17 +54,21 @@ class CatalogoProdutosController {
 					</div> 
 				-->
 
-				<div class'product-btns'>
-				  <a href='#' class='btn btn-sale'>Comprar</a>
-				  <button class='btn-card'>+</button>
-				</div>
+				<div class='product-btns'>
+            <a 
+              href='./views/produto.php?p={$produto['id']}'
+              class='btn btn-sale'
+            >
+              Comprar agora
+            </a>
+            <button class='btn btn-card'>+</button>
+          </div>
 			</div>
 			<!-- end single box -->
 			";
 		}
 		
-	  print_r($produtos);
-		echo $conteudo;
+	  return $conteudo;
 	}
 	
 }
