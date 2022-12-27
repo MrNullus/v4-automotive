@@ -1,0 +1,25 @@
+// resources essencials
+@import './fonts';
+@import './variables';
+@import './mixins';
+
+// styles generals
+@import './reset';
+@import './global';
+
+// Partials
+@import './partials/_header.scss';
+@import './partials/_footer.scss';
+@import './partials/_buttons.scss';
+@import './partials/_categorias.scss';
+
+// Pages
+@import './pages/sobrenos.scss';
+@import './pages/contact.scss';
+
+// Components
+@import './components/quickSearch.scss';
+@import './components/sectionFeatures.scss';
+@import './components/sectionProducts.scss';
+@import './components/formCadastro.scss';
+@import './components/singleProduto.scss';
