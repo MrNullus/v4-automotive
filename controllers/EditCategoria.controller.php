@@ -15,7 +15,7 @@ if (Validacao::camposObrigatorios( $campos )) {
   $categoria = new Categoria($_PDO);
   $dados = [ 
   	':nome' => $campos[0], 
-  	':id'   => $campos[1];
+  	':id'   => $campos[1]
   ];
 
 	if( !$categoria->atualizar( $dados ) ) {
