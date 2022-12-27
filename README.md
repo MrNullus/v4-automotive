@@ -13,12 +13,8 @@ O projeto se trata de um site para uma loja ficticia de auto peças. Feito com P
 <h2 style="color: #ccc; font-weight: bolder;">
   📼 Tecnologias
 </h2>
-| HTML
-| CSS
-| Bootstrap
-| JavaScript Vanilla
-| PHP Vanilla
-| Design Responsivo
+
+| ![HTML](https://img.shields.io/badge/%20-HTML-red) | ![CSS](https://img.shields.io/badge/%20-CSS-darkblue) | ![Bootstrap](https://img.shields.io/badge/%20-Bootstrap-blue) | ![JavaScript](https://img.shields.io/badge/%20-JavaScript-yellow) | ![PHP](https://img.shields.io/badge/%20-PHP-indigo) | ![Design Responsivo](https://img.shields.io/badge/%20-Design%20Responsivo-darkgreen) |
 
 <br>
 
