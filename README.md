@@ -11,6 +11,18 @@ O projeto se trata de um site para uma loja ficticia de auto peças. Feito com P
 <br>
 
 <h2 style="color: #ccc; font-weight: bolder;">
+  📼 Tecnologias
+</h2>
+| HTML
+| CSS
+| Bootstrap
+| JavaScript Vanilla
+| PHP Vanilla
+| Design Responsivo
+
+<br>
+
+<h2 style="color: #ccc; font-weight: bolder;">
   🎯 Run 
 </h2>
 
