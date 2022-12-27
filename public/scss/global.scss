@@ -1,0 +1,71 @@
+/**********
+	Classes 
+	Gerais
+***********/
+
+.sr-only {
+	display: none!important;
+}
+
+.text-center {
+	text-align: center!important;
+}
+
+.logo-header,
+.logo-footer {
+	width: 199px;
+}
+
+.input {
+	padding: 0.25rem 0.67rem;
+	border-radius: 0.23rem;
+	font-weight: 400;
+	color: $clr-dark;
+}	
+.input::placeholder {
+	font-weight: 300;
+}
+
+.heading {
+	@include custom-font(
+		$font-text-special, 
+		500!important, 2.6rem!important, 
+		$clr-dark, 1pt, left
+	);
+}
+
+.subheading {
+	@include custom-font(
+		$font-text-special, 
+		500!important, 2.4rem!important, 
+		$clr-dark, 1pt, left
+	);
+}
+
+.btn-add {
+  line-height: 30px;
+  width: 71px;
+  background: $clr-green-500;
+}
+
+.btn:hover {
+	background-color: transparent!important;
+	color: $clr-dark-primary!important;
+}
+
+.btn-dropdown {
+	display: none;
+}
+
+.text-color-primary {
+	color: $clr-dark-primary;
+}
+
+
+/**********
+	Page
+***********/
+
+.page {
+	min-height: 100vh;
+}
