@@ -1,0 +1,96 @@
+:root {
+	--color-primary: #C82323;
+	--color-dark-500: #262626;
+}
+
+
+.container-product {
+	padding: 4rem 0;
+}
+
+.container-product .single-row {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 1.9rem;		
+}
+
+.brand-product .img {
+	width: 360px;
+	max-width: 400px;
+	height: 250px;
+	background: rgba(69,69,69, 0.1);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 9px;
+}
+
+
+.info {
+	width: 100%;
+	padding: 0 2rem;
+}
+
+
+.info .content {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem 0;
+}
+
+.info .content .name {
+	font-family: 'Medula One', cursive;
+	letter-spacing: 1pt;
+	font-size: 1.9rem!important;	
+	text-decoration: underline;
+	text-decoration-color: var(--color-primary);
+}
+
+.info .content p  {
+	margin: 0.23rem 0.45rem;
+	padding:0;
+}
+.info .content strong {
+	background: #000;
+	padding: 0.45rem;
+	border-radius: 13px;
+	color: #fff;
+}
+
+.price strong, 
+.unidade strong {
+	margin-right: 0.45rem;
+}
+
+.description strong, 
+.obs strong {
+	display: block;
+	margin-bottom: 0.45rem;
+}
+
+.info .btn {
+	width: 50%;
+	border: 2px solid black;
+	border-color: black!important;
+	border-radius: 5px;
+	background: var(--color-dark-500);
+	margin-left: 0.45rem;	
+	color: white;
+	text-align: center;
+}
+
+.info .btn:hover {
+	background: transparent!important;
+	color: var(--color-primary)!important;
+	font-weight: 600;
+}
+
+
+@media screen and (max-width: 780px) {
+	.container-product .single-row {
+		flex-wrap: wrap;
+	}
+}
