@@ -1,0 +1,39 @@
+/**********
+	Footer
+***********/
+
+.link-media-socials i {
+	color: #222;
+	font-size: 1.25rem!important;
+
+	&:hover {
+		transition: 0.67 linear;
+		transform: scale(1.6);
+		cursor: pointer;
+		color: $clr-dark-primary;
+	}
+}
+
+.section-contact {
+	margin-top: 3rem;
+}
+
+.list-media {
+	flex: 1;
+	align-items: center; 
+	justify-content: center;
+	gap: 2rem;
+
+	a {
+		font-size: 1.1rem!important;
+		padding: 0.65rem;
+		border: 2px solid $clr-dark;
+		border-radius: 5px;
+	
+		&:hover {
+			transition: 0.45s;
+			background: $clr-dark;
+			color: #fff;
+		}
+	}	
+}

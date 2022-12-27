@@ -1,0 +1,44 @@
+/**********
+	Buttons
+***********/
+
+.btn-dark {
+	background-color: $clr-dark-primary;
+}
+
+.btn-outline {
+	border: 2px solid $clr-dark-primary;
+	background-color: transparent;
+
+	&:hover {
+		background-color: $clr-dark-primary;
+	
+		a {
+			color: $clr-white !important;
+		}
+	}
+}
+
+.btn-search {
+  height: 36px;
+  background-color: $clr-white!important;
+  border-color: $clr-dark;
+  color: $clr-dark!important;
+
+  &:hover {
+    background: $clr-dark!important;
+    color: $clr-white!important;
+  }
+}
+
+.btn-sale {
+	background: $clr-red!important;
+	flex-basis: 70%;
+	border-bottom-left-radius: 12px!important;
+	border-right: none!important;
+}
+
+.btn-card {
+	flex-basis: 30%;	
+	background: $clr-green-400!important;
+}

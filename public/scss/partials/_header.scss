@@ -1,0 +1,38 @@
+/**********
+	Header
+***********/
+
+.header__box-top .row-top .col-md-3 button:not(:first-child) {
+	margin-left: 0.56rem;
+}
+
+.list-links {
+	gap: 1.2rem;
+}
+
+.link-active {
+	background: #F8F8F8;	
+}
+.link-dark-active {
+	background-color: $clr-dark-primary;	
+	color: $clr-white;
+}
+
+.header__navbar-main ul li a {
+	font-family: $font-text-special;
+	font-size: 1.5rem!important;
+	letter-spacing: 1pt;
+}
+
+.header__navbar-main ul li a,
+.header__navbar-categories ul li a {
+	color: $clr-dark-primary;
+}
+
+.link-active:hover {
+	background-color: $clr-dark!important;
+
+	&:hover a {
+		color: $clr-white!important;
+	}
+}
