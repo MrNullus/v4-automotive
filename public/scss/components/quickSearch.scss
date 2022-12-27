@@ -1,0 +1,50 @@
+.box-quick-search {
+	margin-bottom: 2rem;
+
+	form {
+		padding: 0;
+	}
+
+	.btn-search {
+		height: 41.97px;
+		width: 70px;
+		background-color: #dc3545!important;
+		border: none;
+
+		&:hover {
+			color: #373b3e;
+			background-color: $clr-white!important;;
+			border: 2px solid $clr-dark;
+		}
+	}
+}
+
+.box-search-recents {
+	margin-top: 1.2rem;
+
+	.subheading {
+		font-weight: 700;
+	}
+
+	.list-recents {
+		border-bottom: 2px solid $clr-dark;
+		padding: 1rem 2rem;
+
+		.item-recent {
+			&:not(:first-child) {
+				margin-top: 0.49rem;
+			}
+		
+			&:hover {
+				border-bottom: 2px solid #dc3545;
+			}
+			
+			.item-recent a {
+				color: #222;
+			}
+		}
+	}
+}
+
+
+

@@ -1,0 +1,59 @@
+/**********
+	Section
+Feauteres
+***********/
+
+.custom-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	margin-top: 6rem;
+	margin-bottom: 6rem;
+	flex: 1;
+
+	.wrapper {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 1.2rem;
+	}
+
+	.row {
+		flex-basis: 100%;
+	}
+}
+
+@media screen and (max-width: 830px) {
+	.custom-cards .wrapper {
+		flex-wrap: wrap;
+	}
+}
+
+.card-container {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:200px;
+
+	.card-overlay {
+		display: none!important;
+		background-color: rgba(0, 0, 0, 0.6);
+		padding-top: 0;
+
+		h3,
+		ul li small {
+			color: #fcfcfc;
+		}
+
+		h3 {
+			font-size: 1rem!important;
+		}
+	}
+
+	&:hover {
+		.card-overlay {
+			display: block!important;
+			transition: 0.45s linear;
+			cursor: pointer;
+		}
+	}
+}
