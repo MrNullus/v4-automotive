@@ -51,11 +51,9 @@ class PesquisasRapidas {
 		
 		$stmt = $this->pdo->query( $stmt );
 		
-		if ( $stmt->rowCount() > 0 ) {
-			return true;
+		if ( $stmt->rowCount() <= 0 ) {
+			throw new Exception("Erro na redefinição do termo pesquisado", 1);		
 		}
-		
-		return false;
 		
 	}
 	

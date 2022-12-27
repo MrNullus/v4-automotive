@@ -59,7 +59,6 @@ class Produto
 
 		$stmt = "";
 		$produtos = array();
-		$find_array = $dados;
 
 		$stmt = "
 			SELECT
