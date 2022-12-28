@@ -1,0 +1,85 @@
+/**********
+	Form 
+ Produto
+***********/
+
+.text-alert,
+.text-success {
+  color: #f1f1f1;
+  width: 100%;
+  padding: 1.2rem;
+  text-align: center;
+  margin: 2rem 0;
+  border-radius: 11px;
+  font-size: 1.2rem!important;
+  font-weight: 600;
+  box-shadow: 2px 2px 4px #c3c3c3;
+}
+
+.text-alert{
+  background-color: #ff1616;
+}
+.text-success {
+  background-color: $clr-green-300;
+  color: $clr-dark-primary!important;
+}
+
+.form-produto .row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+   > * {
+    padding: 0;
+  }
+}
+
+.row-input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  
+    > div {
+      width: 50%;
+      height: 40px;
+    }
+}
+
+.form-floating {
+  padding-left: 0.12rem;
+}
+
+.form-control-unidade {
+  margin: 0;
+}
+
+.group-button {
+  display: flex;
+  flex: 1 auto;
+  justify-content: center;
+  gap: 1rem;
+
+  input[type=submit],
+  button {
+    min-width: 50%;
+  }
+
+  .btn-cadastar {
+    background: $clr-dark;
+    color: $clr-white;
+  
+    &:hover {
+      border-color: $clr-dark
+    }
+  }
+  
+  .btn-limpar {
+    background: $clr-red-300;
+    color: $clr-white;
+  
+    &:hover {
+      border-color: $clr-red-300;
+    }
+  }  
+}
