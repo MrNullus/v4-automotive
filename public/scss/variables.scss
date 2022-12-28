@@ -1,8 +1,14 @@
-// fonts
+/*
+* fonts
+*/ 
 $font-text-body: 'Source Sans Pro', sans-serif;
 $font-text-special: 'Medula One', cursive;
 
-// colors
+
+/*
+* colors
+*/ 
+$clr-gray-500: #c3c3c3c3;
 $clr-white: #FFF;
 
 $clr-dark-primary: #262626;
@@ -10,6 +16,9 @@ $clr-dark: #000;
 
 $clr-red-primary: #C82323;
 $clr-red: red;
+$clr-red-400: #ff1616;
+$clr-red-300: #fe1616;
 
 $clr-green-500: rgb(29,157,116);
 $clr-green-400: #5AEC5A;
+$clr-green-300: #16FF67;
