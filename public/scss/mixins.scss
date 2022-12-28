@@ -1,8 +1,8 @@
-@mixin custom-font(fml, wght, sz, clr, spcg, algn) {
-	font-family: fml;
-	font-weight: wght;
-	font-size: sz;
-	color: clr;
-	letter-spacing: spcg;
-	text-align: algn;
+@mixin custom-font($fml, $wght, $sz, $clr, $spcg, $algn) {
+	font-family: $fml;
+	font-weight: $wght;
+	font-size: $sz;
+	color: $clr;
+	letter-spacing: $spcg;
+	text-align: $algn;
 }
