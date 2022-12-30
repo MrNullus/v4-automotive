@@ -6,3 +6,9 @@
 	letter-spacing: $spcg;
 	text-align: $algn;
 }
+
+@mixin changeInHover {
+	&:not([disabled]):hover {
+		@content;
+	}
+}
