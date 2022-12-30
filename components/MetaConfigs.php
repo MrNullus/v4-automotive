@@ -34,9 +34,5 @@
 <!--===== Links File CSS  =====-->
 <link
   rel="stylesheet"
-  href="<?php echo assets( 'css', 'reset.css' ); ?>"
-/>
-<link
-  rel="stylesheet"
-  href="<?php echo assets( 'css', 'global.css' ); ?>"
+  href="<?php echo assets( 'dist/css', 'styles.min.css' ); ?>"
 />

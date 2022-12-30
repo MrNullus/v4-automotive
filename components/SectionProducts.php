@@ -1,6 +1,6 @@
 <?php  
 // # Extendendo Estilos
-extends_styles([ 'sectionProducts' ]);
+// extends_styles([ 'sectionProducts' ]);
 
 // # Importanto classes necessarias
 import_models(

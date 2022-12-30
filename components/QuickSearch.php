@@ -1,4 +1,4 @@
-<?php extends_styles([ 'quickSearch' ]); ?>
+<!-- <?php extends_styles([ 'quickSearch' ]); ?> -->
 
 <aside class="box-quick-search">
 

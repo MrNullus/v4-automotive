@@ -1,6 +1,6 @@
 <?php  
 // # Extendendo Estilos
-extends_styles([ 'sectionFeatures' ]);
+// extends_styles([ 'sectionFeatures' ]);
 
 // # Data Initial
 $data = [

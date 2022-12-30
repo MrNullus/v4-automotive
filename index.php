@@ -19,7 +19,7 @@ require_once 'minerva.config.php';
     <div class="container-fluid page">
 
       <!-- header main -->
-      <?php renderComponent('Header'); ?>
+      <?php renderComponent( 'Header' ); ?>
       <!-- end of header main -->
 
       <div class="banner-container">
