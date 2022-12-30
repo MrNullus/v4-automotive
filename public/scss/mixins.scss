@@ -12,3 +12,10 @@
 		@content;
 	}
 }
+
+@mixin bg-img($img, $opt-repeat: no-repeat, $opt-position, $opt-size) {
+	background-image: $img;
+	background-repeat: $opt-repeat;
+	background-position: $opt-position;
+	background-size: $opt-size;
+}
