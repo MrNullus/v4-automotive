@@ -11,16 +11,25 @@ $font-text-special: 'Medula One', cursive;
 $clr-white: #ffffff;
 
 $clr-gray-500: #c3c3c3c3;
+$clr-gray-300: #f3f3f3;	
 $clr-gray-100: #f1f1f1;
 
 $clr-dark-primary: #262626;
 $clr-dark: #000;
+$clr-dark-200: #222;
 
 $clr-red-primary: #C82323;
 $clr-red: red;
-$clr-red-400: #ff1616;
+$clr-red-500: #dc3545;
 $clr-red-300: #fe1616;
+$clr-red-400: #ff1616;
 
 $clr-green-500: rgb(29,157,116);
 $clr-green-400: #5AEC5A;
 $clr-green-300: #16FF67;
+
+
+/*
+* shadows
+*/
+$bs-100: 0px 0px 1.2px rgba(0, 0, 0, 1.0);
