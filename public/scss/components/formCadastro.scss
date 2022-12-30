@@ -78,7 +78,7 @@
     background: $clr-red-300;
     color: $clr-white;
   
-    &:hover {
+    @include changeInHover {
       border-color: $clr-red-300;
     }
   }  
