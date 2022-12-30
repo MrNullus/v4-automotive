@@ -8,7 +8,7 @@
 	.btn-search {
 		height: 41.97px;
 		width: 70px;
-		background-color: #dc3545!important;
+		background-color: $clr-red-500!important;
 		border: none;
 
 		&:hover {
@@ -36,15 +36,12 @@
 			}
 		
 			&:hover {
-				border-bottom: 2px solid #dc3545;
+				border-bottom: 2px solid $clr-red-500;
 			}
 			
 			.item-recent a {
-				color: #222;
+				color: $clr-dark-200;
 			}
 		}
 	}
 }
-
-
-
