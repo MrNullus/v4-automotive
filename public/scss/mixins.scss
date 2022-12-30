@@ -13,7 +13,7 @@
 	}
 }
 
-@mixin bg-img($img, $opt-repeat: no-repeat, $opt-position, $opt-size) {
+@mixin bg-img($img, $opt-repeat, $opt-position, $opt-size) {
 	background-image: $img;
 	background-repeat: $opt-repeat;
 	background-position: $opt-position;
