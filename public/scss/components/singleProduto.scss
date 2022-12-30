@@ -75,7 +75,7 @@
 			color: $clr-white;
 			text-align: center;
 
-			@include hover {
+			@include changeInHover {
 				background: transparent!important;
 				color: $clr-red-primary!important;
 				font-weight: 600;
