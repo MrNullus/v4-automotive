@@ -1,11 +1,11 @@
 // resources essencials
-@import './fonts';
-@import './variables';
-@import './mixins';
+@import './fonts.scss';
+@import './variables.scss';
+@import './mixins.scss';
 
 // styles generals
-@import './reset';
-@import './global';
+@import './reset.scss';
+@import './global.scss';
 
 // Partials
 @import './partials/_header.scss';
@@ -15,7 +15,7 @@
 
 // Pages
 @import './pages/sobrenos.scss';
-@import './pages/contact.scss';
+// @import './pages/contact.scss';
 
 // Components
 @import './components/quickSearch.scss';
