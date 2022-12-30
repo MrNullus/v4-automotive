@@ -20,7 +20,7 @@
 
 			@include bg-img(
 				url('../img/sobrenos-carros.png'), 
-				center, contain
+				no-repeat, center, contain
 			);
 		}
 	}
