@@ -17,10 +17,18 @@ class PesquisasRapidas {
 		$this->pdo = $pdo;
 		$this->termos_pesquisados = array();
 	}
-	
+
+
+	public function redefinirTermosPesquisados() {
+		$stmt = "DELETE FROM PesquisasRapidas WHERE id >= 5";
+		$stmt = $this->pdo->query( $stmt );
+		
+		if ( $stmt->rowCount() <= 0 ) {
+			throw new Exception("Erro na redefinição do termo pesquisado", 1);		
+		}
+	}
 	
 	public function setTermosPesquisados( $termo_pesquisado ) {
-		
 		$stmt = "
 		INSERT INTO PesquisasRapidas (termo) VALUES (:termo_pesquisado)
 		";
@@ -42,23 +50,9 @@ class PesquisasRapidas {
 		}
 		
 		return false;
-		
 	}
 	
-	public function redefinirTermosPesquisados() {
-		
-		$stmt = "DELETE FROM PesquisasRapidas WHERE id >= 5";
-		
-		$stmt = $this->pdo->query( $stmt );
-		
-		if ( $stmt->rowCount() <= 0 ) {
-			throw new Exception("Erro na redefinição do termo pesquisado", 1);		
-		}
-		
-	}
-	
-	public function getTermosPesquisados() {
-		
+	public function getTermosPesquisados() {		
 		$stmt = "
 			SELECT
 				P.nome,
