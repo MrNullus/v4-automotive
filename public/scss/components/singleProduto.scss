@@ -1,0 +1,91 @@
+.container-product {
+	padding: 4rem 0;
+
+	.single-row {
+		display: flex;
+		flex: 1;
+		align-items: center;
+		justify-content: space-evenly;
+		gap: 1.9rem;		
+
+		.brand-product .img {
+			width: 360px;
+			max-width: 400px;
+			height: 250px;
+			background: rgba(69,69,69, 0.1);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			border-radius: 9px;
+		}
+		
+		.info {
+			width: 100%;
+			padding: 0 2rem;
+		
+			.content {
+				display: flex;
+				flex-direction: column;
+				// $clr-dark-primary;
+		
+				.name {
+					font-family: 'Medula One', cursive;
+					letter-spacing: 1pt;
+					font-size: 1.9rem!important;	
+					text-decoration: underline;
+					text-decoration-color: $clr-red-primary;
+				}
+		
+				p  {
+					margin: 0.23rem 0.45rem;
+					padding:0;
+
+					strong {
+						background: #000;
+						padding: 0.45rem;
+						border-radius: 13px;
+						color: #fff;
+					}
+				}
+			}
+		}
+
+		.price, 
+		.unidade {
+			strong {
+				margin-right: 0.45rem;
+			}
+		}
+		
+		.description, 
+		.obs {
+			strong {
+				display: block;
+				margin-bottom: 0.45rem;
+			}
+		}
+		
+		.btn {
+			width: 50%;
+			border: 2px solid $clr-dark;
+			border-color: $clr-dark!important;
+			border-radius: 5px;
+			background: $clr-dark-primary;
+			margin-left: 0.45rem;	
+			color: $clr-white;
+			text-align: center;
+
+			@include hover {
+				background: transparent!important;
+				color: $clr-red-primary!important;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.container-product .single-row {
+		flex-wrap: wrap;
+	}
+}
