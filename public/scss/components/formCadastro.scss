@@ -13,7 +13,7 @@
   border-radius: 11px;
   font-size: 1.2rem!important;
   font-weight: 600;
-  box-shadow: 2px 2px 4px #c3c3c3;
+  box-shadow: 2px 2px 4px $clr-gray-500;
 }
 
 .text-alert{
@@ -69,7 +69,7 @@
     background: $clr-dark;
     color: $clr-white;
   
-    &:hover {
+    @include changeInHover {
       border-color: $clr-dark
     }
   }
