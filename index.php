@@ -58,4 +58,4 @@ require_once 'minerva.config.php';
     <?php renderComponent( 'ScriptComponent' ); ?>
   </body>
 
-</html>'
+</html>
