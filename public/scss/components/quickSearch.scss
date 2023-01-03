@@ -9,11 +9,11 @@
 		height: 41.97px;
 		width: 70px;
 		background-color: $clr-red-500!important;
-		border: none;
+		border: none!important;
 
 		&:hover {
-			color: #373b3e;
-			background-color: $clr-white!important;;
+			color: #373b3e!important;
+			background-color: $clr-white!important;
 			border: 2px solid $clr-dark;
 		}
 	}

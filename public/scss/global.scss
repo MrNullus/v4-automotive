@@ -27,11 +27,17 @@
 }
 
 .heading {
-	@include custom-font(
-		$font-text-special, 
-		500!important, 2.6rem!important, 
-		$clr-dark, 1pt, left
-	);
+	// @include custom-font(
+	// 	$font-text-special, 
+	// 	500!important, 2.6rem!important, 
+	// 	$clr-dark, 1pt, left
+	// );
+	text-align: left;
+	letter-spacing: 1pt;
+	font-size: 2.6rem!important;
+	font-family: 'Medula One', cursive;
+	font-weight: 500!important;
+	color: #000;
 }
 
 .subheading {

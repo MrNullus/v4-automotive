@@ -1,5 +1,5 @@
 @mixin custom-font($fml, $wght, $sz, $clr, $spcg, $algn) {
-	font-family: $fml;
+	font-family: $fml!important;
 	font-weight: $wght;
 	font-size: $sz;
 	color: $clr;
